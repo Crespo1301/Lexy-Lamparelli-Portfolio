@@ -18,7 +18,7 @@ export const siteContent = {
     text: [
       'I create visual-first marketing work with a focus on polished Canva design, short-form content, and social media storytelling. My goal is always to make content feel elevated, intentional, and easy for brands to use across platforms.',
       'This portfolio highlights the creative work I want to lead with most: custom Canva graphics, TikTok and social content, and examples of the social media work I have completed in previous roles.',
-      'As you replace this placeholder copy, keep the wording personal and concise. This section works best with three short paragraphs that quickly explain who she is, what she creates, and what kind of opportunities she is looking for.',
+      'As you replace this placeholder copy, keep the wording personal and concise. This section works best with three short paragraphs that quickly explain who you are, what you create, and what kind of opportunities you are looking for.',
     ],
     badges: {
       role: 'Content Creator',
@@ -90,7 +90,7 @@ export const siteContent = {
     cards: [
       {
         title: 'Role Overview',
-        text: 'Add her previous title, company, and a concise explanation of what she owned or supported day-to-day.',
+        text: 'Add your previous title, company, and a concise explanation of what you owned or supported day-to-day.',
       },
       {
         title: 'Creative Responsibilities',
