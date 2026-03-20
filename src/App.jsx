@@ -1,6 +1,8 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import SkillsSection from './components/SkillsSection'
+import WorkDirectory from './components/WorkDirectory'
 import CanvaGallery from './components/CanvaGallery'
 import SocialShowcase from './components/SocialShowcase'
 import Experience from './components/Experience'
@@ -15,6 +17,8 @@ export default function App() {
       <main>
         <Hero hero={siteContent.hero} />
         <About about={siteContent.about} />
+        <SkillsSection skills={siteContent.skills} />
+        <WorkDirectory workDirectory={siteContent.workDirectory} />
         <CanvaGallery items={siteContent.canvaProjects} />
         <SocialShowcase items={siteContent.socialProjects} />
         <Experience experience={siteContent.experience} />

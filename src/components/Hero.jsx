@@ -3,12 +3,12 @@ export default function Hero({ hero }) {
     <section className="cover-section" id="top">
       <div className="container cover-shell">
         <div className="cover-title-wrap">
-          <p className="cover-kicker cover-kicker-left"></p>
+          <p className="cover-kicker cover-kicker-left">Work Samples</p>
+          <p className="cover-kicker cover-kicker-right">Marketing</p>
 
           <h1 className="cover-title" aria-label="Marketing Portfolio">
-            <span className="cover-title-line">
-              <span className="cover-script">M</span>
-              <span>arketing</span>
+            <span className="cover-title-line cover-title-marketing">
+              <span className="cover-script">M</span><span className="cover-word">arketing</span>
             </span>
             <span className="cover-title-line cover-title-line-lower">Portfolio</span>
           </h1>

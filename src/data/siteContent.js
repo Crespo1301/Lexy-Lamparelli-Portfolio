@@ -1,6 +1,8 @@
 export const siteContent = {
   navItems: [
     { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills-certifications' },
+    { label: 'My Work', href: '#my-work' },
     { label: 'Canva Work', href: '#canva-work' },
     { label: 'Social Media', href: '#social-media' },
     { label: 'Experience', href: '#experience' },
@@ -18,7 +20,7 @@ export const siteContent = {
     text: [
       'I create visual-first marketing work with a focus on polished Canva design, short-form content, and social media storytelling. My goal is always to make content feel elevated, intentional, and easy for brands to use across platforms.',
       'This portfolio highlights the creative work I want to lead with most: custom Canva graphics, TikTok and social content, and examples of the social media work I have completed in previous roles.',
-      'As you replace this placeholder copy, keep the wording personal and concise. This section works best with three short paragraphs that quickly explain who you are, what you create, and what kind of opportunities you are looking for.',
+      'As you replace this placeholder copy, keep the wording personal and concise. This section works best with three short paragraphs that quickly explain who she is, what she creates, and what kind of opportunities she is looking for.',
     ],
     badges: {
       role: 'Content Creator',
@@ -27,6 +29,59 @@ export const siteContent = {
       instagram: 'Add Instagram followers',
     },
   },
+  skills: {
+    degree: 'BS, Marketing',
+    certifications: [
+      'LinkedIn Marketing Strategy Certification by LinkedIn',
+      'Google Ads Creative Certification by Google',
+      'Google Analytics for Beginners Certification by Google',
+      'Advanced Digital Marketing Certification by Sky Society',
+    ],
+    tools: [
+      'Monday.com',
+      'HubSpot',
+      'Google Analytics',
+      'Microsoft Office',
+      'Slack',
+      'Constant Contact',
+      'Mailchimp',
+      'Later',
+      'Canva',
+      'Google Workspace',
+      'Miro',
+      'Semrush',
+    ],
+  },
+  workDirectory: [
+    {
+      title: 'Canva Work',
+      href: '#canva-work',
+      image: '',
+      placeholderLabel: 'Design showcase',
+      placeholderClass: 'placeholder-floral',
+    },
+    {
+      title: 'Social Media',
+      href: '#social-media',
+      image: '',
+      placeholderLabel: 'Short-form content',
+      placeholderClass: 'placeholder-wave',
+    },
+    {
+      title: 'Experience',
+      href: '#experience',
+      image: '',
+      placeholderLabel: 'Campaign support',
+      placeholderClass: 'placeholder-bloom',
+    },
+    {
+      title: 'Contact',
+      href: '#contact',
+      image: '',
+      placeholderLabel: 'Get in touch',
+      placeholderClass: 'placeholder-cloud',
+    },
+  ],
   canvaProjects: [
     {
       title: 'Brand Promo Graphics',
@@ -90,7 +145,7 @@ export const siteContent = {
     cards: [
       {
         title: 'Role Overview',
-        text: 'Add your previous title, company, and a concise explanation of what you owned or supported day-to-day.',
+        text: 'Add her previous title, company, and a concise explanation of what she owned or supported day-to-day.',
       },
       {
         title: 'Creative Responsibilities',
