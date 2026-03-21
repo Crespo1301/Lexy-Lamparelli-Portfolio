@@ -124,13 +124,19 @@
 
   .bio-title,
   .portfolio-title,
-  .skills-title,
   .work-directory-title {
     font-size: clamp(3rem, 16vw, 4.25rem);
   }
 
+  .skills-title {
+    font-size: clamp(2.55rem, 12vw, 3.85rem);
+    line-height: 0.94;
+    letter-spacing: -0.045em;
+  }
+
   .skills-title-line-lower {
-    padding-left: 0.3em;
+    margin-top: -0.08em;
+    padding-left: 0;
   }
 
   .bio-grid {
@@ -187,5 +193,62 @@
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    width: min(calc(100% - 1.25rem), var(--container));
+  }
+
+  .topbar-inner {
+    min-height: 4.35rem;
+  }
+
+  .menu-toggle {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .skills-section,
+  .work-directory,
+  .portfolio-section,
+  .contact-section,
+  .bio-section {
+    overflow-x: clip;
+  }
+
+  .skills-title {
+    font-size: clamp(2.2rem, 10.8vw, 3.1rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+  }
+
+  .degree-pill {
+    padding: 0.9rem 1rem;
+    font-size: 1.05rem;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .certification-list li {
+    grid-template-columns: 1.6rem minmax(0, 1fr);
+    gap: 0.55rem;
+    font-size: 0.98rem;
+  }
+
+  .gallery-card-body,
+  .social-card-body {
+    padding: 1.2rem;
+  }
+
+  .gallery-card-body h3,
+  .social-card-body h3,
+  .experience-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .gallery-media {
+    height: 16rem;
   }
 }

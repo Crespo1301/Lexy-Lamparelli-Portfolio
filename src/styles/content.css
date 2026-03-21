@@ -57,6 +57,11 @@
   text-transform: uppercase;
 }
 
+.skills-title {
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
 .bio-script,
 .skills-script,
 .work-directory-script {
@@ -81,6 +86,7 @@
 .skills-title-line-lower {
   margin-top: -0.18em;
   padding-left: 0.8em;
+  overflow-wrap: anywhere;
 }
 
 .bio-paragraphs {
@@ -229,6 +235,11 @@
   max-width: 56rem;
   margin: 0 auto;
   text-align: center;
+  min-width: 0;
+}
+
+.skills-heading-wrap > * {
+  max-width: 100%;
 }
 
 .skills-grid {
