@@ -5,7 +5,7 @@ export default function About({ about }) {
         <div className="bio-copy">
           <p className="section-label">Introduction</p>
           <h2 className="bio-title">
-            <span className="bio-script">B</span><span className="title-rest">iography</span>
+            <span className="bio-script">B</span>{'\u00A0'}<span className="title-rest">iography</span> 
           </h2>
 
           <div className="bio-paragraphs">

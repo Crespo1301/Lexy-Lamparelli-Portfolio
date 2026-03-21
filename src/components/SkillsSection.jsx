@@ -6,7 +6,7 @@ export default function SkillsSection({ skills }) {
           <p className="section-label section-label-dark">Qualifications</p>
           <h2 className="skills-title" aria-label="Skills and Certifications">
             <span className="skills-title-line">
-              <span className="skills-script">S</span><span className="title-rest">kills &amp;</span>
+              <span className="skills-script">S</span>{'\u00A0'}<span className="title-rest">kills &amp;</span>
             </span>
             <span className="skills-title-line skills-title-line-lower">Certifications</span>
           </h2>

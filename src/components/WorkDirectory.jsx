@@ -5,7 +5,7 @@ export default function WorkDirectory({ workDirectory }) {
         <div className="work-directory-heading">
           <p className="section-label">Section Navigation</p>
           <h2 className="work-directory-title" aria-label="My Work">
-            <span className="work-directory-script">M</span><span className="title-rest">y Work</span>
+            <span className="work-directory-script">M</span>{'\u00A0'}<span className="title-rest">y Work</span>
           </h2>
         </div>
 
