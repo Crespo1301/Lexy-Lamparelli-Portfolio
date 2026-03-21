@@ -1,0 +1,99 @@
+.cover-section {
+  min-height: 100svh;
+  background: var(--cream);
+  display: grid;
+  align-items: center;
+  padding: 8.75rem 0 3rem;
+}
+
+.cover-shell {
+  position: relative;
+  min-height: calc(100svh - 12rem);
+  display: grid;
+  align-items: center;
+}
+
+.cover-title-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.cover-kicker {
+  position: absolute;
+  top: -0.5rem;
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--red);
+  letter-spacing: -0.05em;
+}
+
+.cover-kicker-left {
+  left: 0;
+}
+
+.cover-kicker-right {
+  right: 0;
+}
+
+.cover-title {
+  margin: 0;
+  color: var(--red);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(5.5rem, 12vw, 10.25rem);
+  font-weight: 500;
+  line-height: 0.84;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.cover-title-line {
+  display: block;
+}
+
+.cover-title-marketing {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.cover-word {
+  display: inline-block;
+}
+
+.cover-title-line-lower {
+  margin-top: -0.35rem;
+}
+
+.cover-script {
+  display: inline-block;
+  margin-right: -0.06em;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 1.18em;
+  line-height: 0.85;
+}
+
+.cover-credit {
+  margin-top: 4.5rem;
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+.cover-credit p,
+.cover-credit a {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(0.95rem, 1vw, 1.1rem);
+}
+
+.cover-credit h2 {
+  margin: 0.15rem 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
