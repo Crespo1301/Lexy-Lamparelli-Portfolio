@@ -616,3 +616,65 @@
 .social-card-actions .portfolio-link .portfolio-link-label {
   transform: translateY(1px);
 }
+
+
+/* Final layout safeguards */
+.experience-grid,
+.experience-card,
+.experience-card p,
+.portfolio-heading-row,
+.portfolio-intro,
+.gallery-modal-copy,
+.gallery-modal-copy p {
+  min-width: 0;
+}
+
+.experience-card p,
+.portfolio-intro {
+  overflow-wrap: anywhere;
+}
+
+
+/* Final polish: tighter title-to-action spacing and improved social image fitting */
+.gallery-card-body-compact,
+.social-card-body-compact {
+  gap: 0.55rem;
+}
+
+.gallery-card-copy,
+.social-card-copy,
+.social-card-actions {
+  gap: 0.28rem;
+}
+
+.gallery-card-copy {
+  min-height: 3.55rem;
+}
+
+.social-card-copy {
+  min-height: 3.7rem;
+}
+
+.portfolio-link-list {
+  margin-top: 0.35rem;
+}
+
+.social-card-actions .portfolio-link-list {
+  margin-top: 0.2rem;
+}
+
+.social-card-body a {
+  margin-top: 0.55rem;
+}
+
+.social-card-media img,
+.gallery-modal-media-social img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.social-card-media,
+.gallery-modal-media-social {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+}

@@ -1,133 +1,150 @@
 # Lexy Lamparelli Portfolio Website
 
-## Project Update — March 18
+Custom React + Vite portfolio site for **Alexia “Lexy” Lamparelli**, built to showcase Canva design work, social media content, professional experience, and contact information in a polished editorial-style single-page experience.
 
----
+## Project Links
 
-## Overview
-This project is a custom-built, single-page portfolio website designed to showcase Lexy Lamparelli’s creative work across Canva design, social media content, and professional experience. The website is being developed with a focus on strong visual presentation, smooth user experience, and a modern editorial design style.
+- **Live site:** https://lexy-lamparelli-portfolio.vercel.app/
+- **GitHub repository:** https://github.com/Crespo1301/Lexy-Lamparelli-Portfolio
+- **Reference inspiration noted during design exploration:** https://skysocietyresource.com/portfolio-christine
 
----
+## Project Stack
 
-## Progress Update (March 18)
+- React
+- Vite
+- CSS split by concern into shared style files
+- Vercel deployment
+- GitHub version control
 
-Significant progress has been made in establishing both the technical foundation and visual direction of the website.
+## Content Summary
 
-### Project Setup
-- Initialized using Vite and React for a fast and scalable development environment
-- Repository created and maintained via GitHub
-- Structured codebase for maintainability and future updates
+### Profile
+- **Name:** Alexia Lamparelli
+- **Title:** Microinfluencer / Content Creator
+- **Location:** Boston, MA
+- **Email:** lexylamps222@gmail.com
 
-### Core Layout
-- Single-page architecture implemented with smooth scrolling between sections
-- Reusable component structure established
+### Niche
+- Lifestyle
+- Fashion
+- Fitness
+- Skincare
+- Hair care
 
-### Hero Section
-- Implemented a bold, editorial-style landing section
-- Custom typography and layout inspired by reference design
-- Clear visual hierarchy to create a strong first impression
+### Social Links
+- **TikTok:** https://www.tiktok.com/@lexylamparelli?_r=1&_t=ZT-94ssaRIAGYY
+- **Instagram:** https://www.instagram.com/lexylamps?igsh=MW00OTR6NG82b2RhOA%3D%3D&utm_source=qr
+- **Pinterest:** https://pin.it/4b6npcTB5
 
-### Biography Section
-- Two-column layout with text and visual elements
-- Large serif heading for emphasis
-- Structured content area for biography and supporting details
-- Highlight badges for key metrics and roles
+### Highlighted TikTok Links
+- https://www.tiktok.com/t/ZTkJDyxog/
+- https://www.tiktok.com/t/ZTkJD6KHf/
+- https://www.tiktok.com/t/ZTkJDYCTR/
+- https://www.tiktok.com/t/ZTkJD2yep/
+- https://www.tiktok.com/t/ZTkJDd4D7/
+- https://www.tiktok.com/t/ZTkJDAeyN/
+- https://www.tiktok.com/t/ZTkJDMk1M/
+- https://www.tiktok.com/t/ZTkJDDe2V/
+- https://www.tiktok.com/t/ZTkJDFDtN/
 
-### Styling System
-- Global typography and color system implemented
-- Consistent spacing and layout structure across sections
-- Responsive design considerations in progress
+## Brand / Visual Direction
 
----
+### Visual Positioning
+The site is designed to feel:
+- editorial
+- feminine
+- modern
+- warm
+- polished
+- portfolio-forward
 
-## Current Status
+### Primary Brand Color
+Current project styles are centered around a deep warm red and cream palette.
 
-The website is deployed and accessible via a live preview environment hosted on Vercel. This allows for real-time updates and easy review.
+Suggested working brand tokens based on the current build:
+- **Primary red:** `#B00F06`
+- **Cream background:** `#FFF6F3`
+- **Dark text:** `#241713`
 
-Note: Some content currently uses placeholders and will be replaced with final assets and copy.
+> Final production colors should always match the values defined in `src/styles/tokens.css`.
 
----
+### Logos / Brand Assets in Use
+The project currently uses image assets placed in the repo for:
+- profile portrait
+- work directory thumbnails
+- Canva gallery previews
+- social thumbnails
+- brand/logo graphics in static asset folders
 
-## Live Preview
-
-The latest version of the website can be accessed using the link below:
-
-Live URL:
-(Add Vercel deployment link here)
-
----
-
-## Upcoming Development
-
-The next phase of development will focus on building out the main portfolio content sections.
-
-### Canva Work Section
-- Visual grid of design work
-- Expandable or interactive previews
-
-### Social Media Section
-- Embedded or linked short-form content
-- Highlighted performance metrics
-
-### Experience Section
-- Structured presentation of previous work
-- Clear breakdown of responsibilities and results
-
-### Contact Section
-- Direct contact options including email and social platforms
-
----
-
-## Required Content
-
-To continue development and finalize the site, the following materials are needed:
-
-- Canva design samples (images or links)
-- Social media links (TikTok, Instagram, etc.)
-- Performance metrics (optional)
-- Final biography text (if revisions are needed)
-- Profile or featured image
-
----
-
-## Technical Details
-
-- Framework: Vite + React
-- Deployment: Vercel
-- Version Control: GitHub
-- Architecture: Component-based single-page application
-
----
-
-## Deployment Instructions
-
-This project is deployed through Vercel using GitHub integration.
-
-### Automatic Deployment
-Any updates pushed to the main branch will automatically trigger a new deployment.
-
-### Local Development
-To run the project locally:
+## Local Development
 
 ```bash
 npm install
 npm run dev
 ```
 
----
+## Build
 
-## Notes
+```bash
+npm run build
+```
 
-- The website is built using custom code to allow full design flexibility
-- The layout is optimized for both desktop and mobile devices
-- Updates are continuously deployed and reflected in the live preview
+## Deployment
+This project is deployed through Vercel from GitHub. Pushing to the configured branch triggers a new deployment.
 
----
+## Asset Pathing Note
+For deployed images, use static public paths such as:
 
-## Next Update
+```js
+image: '/assets/Canva/canva-work-9.png'
+```
 
-Further updates will include portfolio content integration and refinement of all remaining sections.
+Do **not** use runtime URLs that begin with `/src/...` for deployed static images.
 
----
+## Project Structure
 
-For any feedback or requested changes, please reach out at any time.
+```text
+src/
+  components/
+  data/
+  styles/
+  App.jsx
+  main.jsx
+
+public/
+  assets/
+    Canva/
+    TikTok/
+    brand-logo/
+```
+
+## Design and IP / Reference Note
+
+This project was built as an original coded portfolio implementation for a client-facing personal brand site. A reference site was reviewed during visual exploration, but the final implementation should remain based on:
+- original copy
+- original code
+- original layout decisions
+- licensed, owned, or authorized images/assets only
+
+### Important Copyright / Fair Use Notes
+This section is a practical project note, not legal advice.
+
+- Copyright generally protects **original expression**, not general ideas, themes, systems, or methods.
+- Website copy, photos, artwork, and other original creative assets can be protected.
+- “Fair use” is **case-specific** and is not guaranteed just because a project is inspired by another design.
+- Using another site for broad inspiration is different from copying its exact text, graphics, source code, or distinctive protected assets.
+- To reduce risk, this project should avoid reusing any third-party protected copy, images, logos, or code unless permission or a license exists.
+- If there is ever concern about similarity, the safest path is to further differentiate layout details, copy, assets, and interactions, or consult a licensed attorney.
+
+## Final Production Checklist
+
+- Confirm all image paths resolve correctly on Vercel
+- Replace any remaining placeholder descriptions
+- Replace any temporary placeholder images
+- Confirm mobile spacing across all sections
+- Verify all Canva/TikTok/Instagram links
+- Confirm final asset ownership or permission status
+- Run a final Lighthouse/performance pass before handoff
+
+## Status
+Ready for final polish and deployment review.

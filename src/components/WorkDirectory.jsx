@@ -15,7 +15,7 @@ export default function WorkDirectory({ workDirectory }) {
               <a href={item.href} className="work-directory-link">
                 <div className="work-directory-media">
                   {item.image ? (
-                    <img src={item.image} alt={item.title} />
+                    <img src={item.image} alt={item.title} loading="lazy" decoding="async" />
                   ) : (
                     <div className={`work-directory-placeholder ${item.placeholderClass || ''}`}>
                       <span>{item.placeholderLabel}</span>

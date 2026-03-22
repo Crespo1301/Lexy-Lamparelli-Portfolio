@@ -1,11 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import useRevealOnScroll from '../hooks/useRevealOnScroll'
 
 const SWIPE_THRESHOLD = 48
 
 export default function CanvaGallery({ items }) {
+  const sectionRef = useRef(null)
   const scrollRef = useRef(null)
   const touchStartX = useRef(null)
+  const modalTouchStartX = useRef(null)
   const [activeIndex, setActiveIndex] = useState(null)
+
+  useRevealOnScroll(sectionRef, [items.length])
 
   const activeItem = useMemo(() => {
     if (activeIndex === null) return null
@@ -59,17 +64,43 @@ export default function CanvaGallery({ items }) {
     if (touchEndX === null) return
 
     const deltaX = touchEndX - touchStartX.current
-    if (Math.abs(deltaX) < SWIPE_THRESHOLD) return
+    if (Math.abs(deltaX) >= SWIPE_THRESHOLD) {
+      scrollGallery(deltaX > 0 ? -1 : 1)
+    }
 
-    scrollGallery(deltaX > 0 ? -1 : 1)
     touchStartX.current = null
+  }
+
+  const moveModal = (direction) => {
+    setActiveIndex((current) => {
+      if (current === null) return current
+      return (current + direction + items.length) % items.length
+    })
+  }
+
+  const handleModalTouchStart = (event) => {
+    modalTouchStartX.current = event.changedTouches[0]?.clientX ?? null
+  }
+
+  const handleModalTouchEnd = (event) => {
+    if (modalTouchStartX.current === null) return
+
+    const touchEndX = event.changedTouches[0]?.clientX ?? null
+    if (touchEndX === null) return
+
+    const deltaX = touchEndX - modalTouchStartX.current
+    if (Math.abs(deltaX) >= SWIPE_THRESHOLD) {
+      moveModal(deltaX > 0 ? -1 : 1)
+    }
+
+    modalTouchStartX.current = null
   }
 
   return (
     <>
-      <section className="portfolio-section portfolio-light" id="canva-work">
+      <section className="portfolio-section portfolio-light" id="canva-work" ref={sectionRef}>
         <div className="container">
-          <div className="portfolio-heading-row portfolio-heading-row-gallery">
+          <div className="portfolio-heading-row portfolio-heading-row-gallery" data-reveal>
             <div>
               <p className="section-label section-label-dark">Featured Section</p>
               <h2 className="portfolio-title">Canva Work</h2>
@@ -92,7 +123,7 @@ export default function CanvaGallery({ items }) {
 
           <div className="gallery-scroll" ref={scrollRef} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
             {items.map((item, index) => (
-              <article key={item.title} className="gallery-card gallery-card-scroll">
+              <article key={item.title} className="gallery-card gallery-card-scroll" data-reveal style={{ '--reveal-delay': `${Math.min(index * 70, 280)}ms` }}>
                 <button
                   type="button"
                   className="gallery-media gallery-media-button"
@@ -100,7 +131,7 @@ export default function CanvaGallery({ items }) {
                   aria-label={`Open ${item.title} preview`}
                 >
                   {item.image ? (
-                    <img src={item.previewImage || item.image} alt={item.title} />
+                    <img src={item.previewImage || item.image} alt={item.title} loading="lazy" decoding="async" />
                   ) : (
                     <div className="gallery-placeholder">
                       <span>{item.imageLabel}</span>
@@ -131,13 +162,19 @@ export default function CanvaGallery({ items }) {
       {activeItem && (
         <div className="gallery-modal" role="dialog" aria-modal="true" aria-label={`${activeItem.title} preview`}>
           <button type="button" className="gallery-modal-backdrop" aria-label="Close preview" onClick={() => setActiveIndex(null)} />
-          <div className="gallery-modal-panel">
+          <div className="gallery-modal-panel" onTouchStart={handleModalTouchStart} onTouchEnd={handleModalTouchEnd}>
+            <button type="button" className="gallery-modal-nav gallery-modal-nav-left" onClick={() => moveModal(-1)} aria-label="Show previous project">
+              ‹
+            </button>
+            <button type="button" className="gallery-modal-nav gallery-modal-nav-right" onClick={() => moveModal(1)} aria-label="Show next project">
+              ›
+            </button>
             <button type="button" className="gallery-modal-close" onClick={() => setActiveIndex(null)} aria-label="Close preview">
               ×
             </button>
             <div className="gallery-modal-media">
               {activeItem.image ? (
-                <img src={activeItem.modalImage || activeItem.image} alt={activeItem.title} />
+                <img src={activeItem.modalImage || activeItem.image} alt={activeItem.title} decoding="async" />
               ) : (
                 <div className="gallery-placeholder gallery-placeholder-modal">
                   <span>{activeItem.imageLabel}</span>
