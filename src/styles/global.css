@@ -21,11 +21,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: hidden;
   font-family: 'Inter', system-ui, sans-serif;
   background: var(--cream);
   color: var(--text-dark);
@@ -586,10 +588,13 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.4);
   background: var(--cream);
   color: var(--red);
+  height: 100%;
 }
 
 .work-directory-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .work-directory-media {
@@ -599,8 +604,13 @@ button {
 .work-directory-media img,
 .work-directory-placeholder {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   border-radius: 1.9rem;
+}
+
+.work-directory-media img {
+  height: auto;
+  object-fit: cover;
 }
 
 .work-directory-placeholder {
@@ -636,6 +646,9 @@ button {
 }
 
 .work-directory-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1rem 1.15rem 1.3rem;
   text-align: center;
 }
@@ -652,7 +665,7 @@ button {
   align-items: center;
   justify-content: center;
   min-height: 2.9rem;
-  margin-top: 1.1rem;
+  margin-top: auto;
   padding: 0 1.35rem;
   border-radius: 999px;
   background: var(--red);
@@ -812,9 +825,16 @@ button {
 }
 
 .social-card-body a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
   margin-top: 1rem;
+  padding: 0 1.35rem;
+  border-radius: 999px;
   font-weight: 700;
+  line-height: 1;
+  text-align: center;
   color: #fff;
 }
 

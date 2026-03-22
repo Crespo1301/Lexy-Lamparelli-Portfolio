@@ -184,6 +184,25 @@
     grid-template-columns: 1fr;
   }
 
+  .gallery-scroll,
+  .social-scroll {
+    grid-auto-columns: minmax(15.5rem, 84vw);
+  }
+
+  .gallery-controls {
+    justify-content: flex-start;
+  }
+
+  .gallery-modal-panel {
+    grid-template-columns: 1fr;
+    max-height: min(92vh, 44rem);
+  }
+
+  .gallery-modal-media {
+    min-height: 15rem;
+    max-height: 46vh;
+  }
+
   .degree-pill {
     width: 100%;
     justify-content: center;
@@ -242,6 +261,11 @@
     padding: 1.2rem;
   }
 
+  .gallery-card-body-compact,
+  .social-card-body-compact {
+    min-height: 9.4rem;
+  }
+
   .gallery-card-body h3,
   .social-card-body h3,
   .experience-card h3 {
@@ -250,5 +274,112 @@
 
   .gallery-media {
     height: 16rem;
+  }
+}
+
+
+@media (max-width: 520px) {
+  .portfolio-link-list {
+    gap: 0.5rem;
+  }
+
+  .portfolio-link {
+    min-height: 2.2rem;
+    padding: 0 0.75rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+  }
+
+  .contact-email {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-links {
+    width: 100%;
+  }
+
+  .contact-links a {
+    flex: 1 1 calc(50% - 0.4rem);
+    min-width: 0;
+  }
+}
+
+
+@media (max-width: 920px) {
+  .gallery-scroll {
+    grid-auto-columns: minmax(18rem, 82vw);
+  }
+
+  .gallery-modal-panel {
+    grid-template-columns: 1fr;
+    max-height: 88vh;
+  }
+
+  .gallery-modal-media,
+  .gallery-placeholder-modal {
+    min-height: 18rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .portfolio-heading-actions {
+    gap: 1.1rem;
+  }
+
+  .gallery-controls {
+    justify-content: flex-start;
+  }
+
+  .gallery-scroll {
+    grid-auto-columns: minmax(16.5rem, 88vw);
+    gap: 1rem;
+  }
+
+  .gallery-media {
+    height: clamp(13rem, 52vw, 18rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .gallery-scroll {
+    grid-auto-columns: minmax(15rem, 90vw);
+    padding-bottom: 0.35rem;
+  }
+
+  .gallery-control-button {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .gallery-modal {
+    padding: 0.85rem;
+  }
+
+  .gallery-modal-copy {
+    padding: 1.25rem;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .gallery-card-copy {
+    min-height: 0;
+  }
+
+  .social-card-copy {
+    min-height: 0;
+  }
+
+  .gallery-card-body h3,
+  .social-card-body h3 {
+    min-height: 0;
+  }
+
+  .gallery-modal-panel,
+  .gallery-modal-panel-dark {
+    width: min(100%, calc(100vw - 1.25rem));
   }
 }
