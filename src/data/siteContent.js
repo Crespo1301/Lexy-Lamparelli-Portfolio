@@ -56,28 +56,28 @@ export const siteContent = {
     {
       title: 'Canva Work',
       href: '#canva-work',
-      image: '/public/assets/brand-logo/canva.png',
+      image: '/assets/brand-logo/canva.png',
       placeholderLabel: 'Brand graphics & layouts',
       placeholderClass: 'placeholder-floral',
     },
     {
       title: 'Social Media',
       href: '#social-media',
-      image: '/public/assets/brand-logo/social.jpg',
+      image: '/assets/brand-logo/social.jpg',
       placeholderLabel: 'TikTok & Instagram highlights',
       placeholderClass: 'placeholder-wave',
     },
     {
       title: 'Experience',
       href: '#experience',
-      image: '/public/assets/brand-logo/experience.jpg',
+      image: '/assets/brand-logo/experience.jpg',
       placeholderLabel: 'Marketing & client-facing roles',
       placeholderClass: 'placeholder-bloom',
     },
     {
       title: 'Contact',
       href: '#contact',
-      image: '/public/assets/brand-logo/contact.jpg',
+      image: '/assets/brand-logo/contact.jpg',
       placeholderLabel: 'Email & social links',
       placeholderClass: 'placeholder-cloud',
     },
@@ -87,7 +87,7 @@ export const siteContent = {
       title: 'Real Estate Newsletter',
       category: 'Canva Design',
       description: '', // TODO: replace with a 6 word description of the project
-      image: '/public/assets/Canva/canva-work-1.png',
+      image: '/assets/Canva/canva-work-1.png',
       imageLabel: 'Featured Canva design',
       links: [
         { label: 'Design 01', href: 'https://www.canva.com/design/DAFeKQUMr_c/0-iyW11aCqwO8algCZavXw/edit?utm_content=DAFeKQUMr_c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' },
@@ -97,8 +97,8 @@ export const siteContent = {
       title: 'Brand Products',
       category: 'Canva Design',
       description: '', // TODO: replace with a 6 word description of the project
-      previewImage: '/public/assets/Canva/canva-work-2-preview.png',
-      image: '/public/assets/Canva/canva-work-2.png',
+      previewImage: '/assets/Canva/canva-work-2-preview.png',
+      image: '/assets/Canva/canva-work-2.png',
       imageLabel: 'Featured Canva design',
       links: [
         { label: 'Design 02', href: 'https://www.canva.com/design/DAHC6T6oVtA/5KDUk3ADmXEP6cQDeHr5wA/edit?utm_content=DAHC6T6oVtA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' },
@@ -168,7 +168,7 @@ export const siteContent = {
       title: 'Promotional Flyer Set',
       category: 'Canva Design',
       description: '', // TODO: replace with a 6 word description of the project
-      image: '/public/assets/Canva/canva-work-9.png',
+      image: '/assets/Canva/canva-work-9.png',
       imageLabel: 'Marketing asset collection',
       links: [
         { label: 'Design 09', href: 'https://www.canva.com/design/DAEmcPGbexM/MgQ9ZbZwiny69E3zx72OIw/edit?utm_content=DAEmcPGbexM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' },
@@ -178,7 +178,7 @@ export const siteContent = {
       title: 'Clothing Brand Socials',
       category: 'Campaign Design',
       description: '', // TODO: replace with a 6 word description of the project
-      image: '/public/assets/Canva/canva-work-10.png',
+      image: '/assets/Canva/canva-work-10.png',
       imageLabel: 'Social media visual set',
       links: [
         { label: 'Design 10', href: 'https://www.canva.com/design/DAEmcE_hghg/j1hGXf39u_Fs2h4N9wPmcw/edit?utm_content=DAEmcE_hghg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' },
@@ -188,7 +188,7 @@ export const siteContent = {
       title: 'Story Post Templates',
       category: 'Campaign Design',
       description: '', // TODO: replace with a 6 word description of the project
-      image: '/public/assets/Canva/canva-work-11.png',
+      image: '/assets/Canva/canva-work-11.png',
       imageLabel: 'Social media visual set',
       links: [
         { label: 'Design 11', href: 'https://www.canva.com/design/DAEnfAOPyWs/euRHmyiPqpD5lxYkec6H_Q/edit?utm_content=DAEnfAOPyWs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' },
@@ -198,7 +198,7 @@ export const siteContent = {
       title: 'Story Post Templates',
       category: 'Campaign Design',
       description: '', // TODO: replace with a 6 word description of the project
-      image: '/public/assets/Canva/canva-work-12.png',
+      image: '/assets/Canva/canva-work-12.png',
       imageLabel: 'Social media visual set',
       links: [
         { label: 'Design 12', href: 'https://www.canva.com/design/DAEnTtWJhZ4/qHAG6a-Z-Mgys-x0zvmDvA/edit?utm_content=DAEnTtWJhZ4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' },
@@ -211,7 +211,7 @@ export const siteContent = {
       platform: 'TikTok',
       description: '', // TODO: replace with a 6 word description of the project
       metric: 'Lifestyle Creator',
-      thumbnail: '/public/assets/TikTok/tiktok1.png',
+      thumbnail: '/assets/TikTok/tiktok1.png',
       links: [
         { label: 'Video 01', href: 'https://www.tiktok.com/t/ZTkJDyxog/' },
         { label: 'Video 02', href: 'https://www.tiktok.com/t/ZTkJD6KHf/' },
@@ -224,7 +224,7 @@ export const siteContent = {
       platform: 'TikTok',
       description: '', // TODO: replace with a 6 word description of the project
       metric: 'Short-Form Content',
-      thumbnail: '/public/assets/TikTok/tiktok2.png',
+      thumbnail: '/assets/TikTok/tiktok2.png',
       links: [
         { label: 'Video 04', href: 'https://www.tiktok.com/t/ZTkJD2yep/' },
         { label: 'Video 05', href: 'https://www.tiktok.com/t/ZTkJDd4D7/' },
@@ -237,7 +237,7 @@ export const siteContent = {
       platform: 'Instagram',
       description: 'An extension of her content style across social platforms, supported by an aesthetic, lifestyle-driven approach and consistent personal branding.',
       metric: 'Beauty & Fashion Niche',
-      thumbnail: '/public/assets/TikTok/tiktok3.png',
+      thumbnail: '/assets/TikTok/tiktok3.png',
       links: [
         { label: 'Video 07', href: 'https://www.tiktok.com/t/ZTkJDMk1M/' },
         { label: 'Video 08', href: 'https://www.tiktok.com/t/ZTkJDDe2V/' },
