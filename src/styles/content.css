@@ -281,7 +281,6 @@
   align-items: start;
   color: var(--red);
   font-weight: 800;
-  text-transform: uppercase;
   line-height: 1.35;
   overflow-wrap: anywhere;
 }
