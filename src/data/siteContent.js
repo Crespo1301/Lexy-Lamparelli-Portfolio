@@ -250,14 +250,20 @@ export const siteContent = {
     cards: [
       {
         title: 'National Corporate Housing',
+        logo: '/assets/brand-logo/nch-logo.png',
+        logoLabel: 'Replace with NCH logo',
         text: 'Currently serving as an Account Manager, delivering tailored housing solutions for relocations, extended stays, and corporate assignments with a strong focus on organization, communication, and client satisfaction.',
       },
       {
         title: 'Bozzuto',
+        logo: '/assets/brand-logo/bozzuto.jpg',
+        logoLabel: 'Replace with Bozzuto logo',
         text: 'Previously served as Director of Resident Experience, creating engaging social media content and hospitality-forward marketing that strengthened community connection and elevated day-to-day resident experiences.',
       },
       {
         title: 'Growth & Strengths',
+        logo: '/assets/brand-logo/skills-logo.jpg',
+        logoLabel: 'Replace with skills mark',
         text: 'Alexia advanced from Sales and Marketing Associate to Director of Resident Experience in under a year, reflecting her adaptability, attention to detail, and ability to merge strategy, creativity, and execution.',
       },
     ],

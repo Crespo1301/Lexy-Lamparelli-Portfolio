@@ -570,3 +570,52 @@
     margin-top: 0.5rem;
   }
 }
+
+@media (max-width: 900px) {
+  .gallery-modal-nav-left {
+    left: 0.75rem;
+  }
+
+  .gallery-modal-nav-right {
+    right: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-card-media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .experience-card-logo {
+    min-height: 3.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-modal-nav {
+    width: 2.7rem;
+    height: 2.7rem;
+    font-size: 1.7rem;
+  }
+
+  .gallery-modal-nav-left {
+    left: 0.6rem;
+  }
+
+  .gallery-modal-nav-right {
+    right: 0.6rem;
+  }
+
+  .footer-links {
+    gap: 0.7rem;
+  }
+}

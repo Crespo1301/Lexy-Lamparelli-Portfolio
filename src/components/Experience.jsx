@@ -13,6 +13,9 @@ export default function Experience({ experience }) {
         <div className="experience-grid">
           {experience.cards.map((card) => (
             <article key={card.title} className="experience-card">
+              <div className="experience-card-logo" aria-label={`${card.title} logo`}>
+                {card.logo ? <img src={card.logo} alt={`${card.title} logo`} loading="lazy" decoding="async" /> : <span>{card.logoLabel || 'Add company logo'}</span>}
+              </div>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </article>

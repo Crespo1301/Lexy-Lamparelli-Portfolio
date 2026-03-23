@@ -49,7 +49,20 @@ export default function CanvaGallery({ items }) {
     const node = scrollRef.current
     if (!node) return
 
+    const maxScroll = Math.max(node.scrollWidth - node.clientWidth, 0)
     const amount = Math.max(node.clientWidth * 0.82, 320)
+    const current = Math.round(node.scrollLeft)
+
+    if (direction > 0 && current >= maxScroll - 8) {
+      node.scrollTo({ left: 0, behavior: 'smooth' })
+      return
+    }
+
+    if (direction < 0 && current <= 8) {
+      node.scrollTo({ left: maxScroll, behavior: 'smooth' })
+      return
+    }
+
     node.scrollBy({ left: direction * amount, behavior: 'smooth' })
   }
 

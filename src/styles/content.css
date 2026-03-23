@@ -527,3 +527,18 @@
     filter: drop-shadow(0 0 0.36rem rgba(255, 255, 255, 0.32));
   }
 }
+
+/* Experience logo styling */
+.experience-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.6rem;
+}
+
+.experience-logo img {
+  height: 28px;        /* 🔥 controls size */
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;        /* optional: softer look */
+}

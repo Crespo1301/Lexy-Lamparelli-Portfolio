@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="md2html by Carlos Crespo">
+    <title>README</title>
+    <style>
+
+/* ========================================
+   md2html Generated Styles
+   Theme: light
+   Author: Carlos Crespo
+   ======================================== */
+
+/* CSS Custom Properties (Variables) */
+:root {
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f6f8fa;
+    --color-bg-tertiary: #f1f3f5;
+    --color-text-primary: #1f2328;
+    --color-text-secondary: #656d76;
+    --color-text-muted: #8b949e;
+    --color-border: #d0d7de;
+    --color-border-light: #e8e8e8;
+    --color-link: #0969da;
+    --color-link-hover: #0550ae;
+    --color-code-bg: #f6f8fa;
+    --color-code-text: #1f2328;
+    --color-blockquote-border: #d0d7de;
+    --color-blockquote-text: #656d76;
+    --color-hr: #d8dee4;
+    --color-toc-bg: #f6f8fa;
+    --color-toc-border: #d0d7de;
+    
+    /* Typography */
+    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", 
+                        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, 
+                        "Liberation Mono", monospace;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* Layout */
+    --max-width: 800px;
+    --border-radius: 6px;
+}
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--font-size-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    padding: var(--spacing-xl);
+    font-family: var(--font-family-base);
+    font-size: 1rem;
+    line-height: var(--line-height-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+}
+
+/* Main Container */
+.markdown-body {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    word-wrap: break-word;
+}
+
+/* Content Area */
+.content {
+    margin-top: var(--spacing-lg);
+}
+
+/* ========== Typography ========== */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--color-border);
+}
+
+h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--color-border);
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: 0.875em;
+}
+
+h6 {
+    font-size: 0.85em;
+    color: var(--color-text-secondary);
+}
+
+/* First heading - no top margin */
+.content > h1:first-child,
+.content > h2:first-child,
+.content > h3:first-child {
+    margin-top: 0;
+}
+
+/* Paragraphs */
+p {
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Links */
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+/* Strong & Emphasis */
+strong, b {
+    font-weight: 600;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* ========== Code ========== */
+
+/* Inline Code */
+code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    font-family: var(--font-family-mono);
+    background-color: var(--color-code-bg);
+    color: var(--color-code-text);
+    border-radius: var(--border-radius);
+    white-space: break-spaces;
+}
+
+/* Code Blocks */
+pre {
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+}
+
+pre code {
+    display: block;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+    font-size: 100%;
+    white-space: pre;
+}
+
+/* ========== Lists ========== */
+
+ul, ol {
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    padding-left: 2em;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+    margin-top: var(--spacing-xs);
+    margin-bottom: 0;
+}
+
+li {
+    margin-bottom: var(--spacing-xs);
+}
+
+li + li {
+    margin-top: var(--spacing-xs);
+}
+
+/* Unordered lists */
+ul {
+    list-style-type: disc;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ul ul ul {
+    list-style-type: square;
+}
+
+/* ========== Blockquotes ========== */
+
+blockquote {
+    margin: 0 0 var(--spacing-md);
+    padding: 0 var(--spacing-md);
+    color: var(--color-blockquote-text);
+    border-left: 0.25em solid var(--color-blockquote-border);
+}
+
+blockquote > :first-child {
+    margin-top: 0;
+}
+
+blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+/* ========== Horizontal Rules ========== */
+
+hr {
+    height: 0.25em;
+    margin: var(--spacing-xl) 0;
+    padding: 0;
+    background-color: var(--color-hr);
+    border: 0;
+    border-radius: var(--border-radius);
+}
+
+/* ========== Images ========== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: var(--spacing-md) 0;
+    border-radius: var(--border-radius);
+}
+
+/* ========== Table of Contents ========== */
+
+.toc {
+    background-color: var(--color-toc-bg);
+    border: 1px solid var(--color-toc-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.toc-title {
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.toc-list {
+    margin: 0;
+    padding-left: var(--spacing-lg);
+    list-style-type: none;
+}
+
+.toc-list ul {
+    margin-top: var(--spacing-xs);
+    margin-bottom: 0;
+    padding-left: var(--spacing-md);
+    list-style-type: none;
+}
+
+.toc-list li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.toc-list a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.toc-list a:hover {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+/* ========== Print Styles ========== */
+
+@media print {
+    body {
+        background: white;
+        color: black;
+        padding: 0;
+    }
+    
+    .toc {
+        page-break-after: always;
+    }
+    
+    pre {
+        white-space: pre-wrap;
+        border: 1px solid #ddd;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+}
+
+/* ========== Responsive Design ========== */
+
+@media (max-width: 768px) {
+    body {
+        padding: var(--spacing-md);
+    }
+    
+    h1 {
+        font-size: 1.75em;
+    }
+    
+    h2 {
+        font-size: 1.35em;
+    }
+    
+    pre {
+        padding: var(--spacing-sm);
+        font-size: 80%;
+    }
+    
+    .toc {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+}
+
+/* ========== Accessibility ========== */
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --color-border: currentColor;
+        --color-link: blue;
+    }
+}
+
+</style>
+</head>
+<body>
+    <article class="markdown-body">
+        <nav class="toc">
+<h2 class="toc-title">Table of Contents</h2>
+<ul class="toc-list">
+<ul>
+<li><a href="#lexy-lamparelli-portfolio-website">Lexy Lamparelli Portfolio Website</a></li>
+<ul>
+<li><a href="#project-links">Project Links</a></li>
+<li><a href="#project-stack">Project Stack</a></li>
+<li><a href="#content-summary">Content Summary</a></li>
+<ul>
+<li><a href="#profile">Profile</a></li>
+<li><a href="#niche">Niche</a></li>
+<li><a href="#social-links">Social Links</a></li>
+<li><a href="#highlighted-tiktok-links">Highlighted TikTok Links</a></li>
+</ul>
+<li><a href="#brand-visual-direction">Brand / Visual Direction</a></li>
+<ul>
+<li><a href="#visual-positioning">Visual Positioning</a></li>
+<li><a href="#primary-brand-color">Primary Brand Color</a></li>
+<li><a href="#logos-brand-assets-in-use">Logos / Brand Assets in Use</a></li>
+</ul>
+<li><a href="#local-development">Local Development</a></li>
+<li><a href="#build">Build</a></li>
+<li><a href="#deployment">Deployment</a></li>
+<li><a href="#asset-pathing-note">Asset Pathing Note</a></li>
+<li><a href="#project-structure">Project Structure</a></li>
+<li><a href="#design-and-ip-reference-note">Design and IP / Reference Note</a></li>
+<ul>
+<li><a href="#important-copyright-fair-use-notes">Important Copyright / Fair Use Notes</a></li>
+</ul>
+<li><a href="#final-production-checklist">Final Production Checklist</a></li>
+<li><a href="#status">Status</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+        <main class="content">
+            <p><strong>Built by CSolutions — Boston Office.</strong> This page documents the portfolio project and launch notes.</p>
+            <h1 id="lexy-lamparelli-portfolio-website">Lexy Lamparelli Portfolio Website</h1>
+
+<p>Custom React + Vite portfolio site for <strong>Alexia “Lexy” Lamparelli</strong>, built to showcase Canva design work, social media content, professional experience, and contact information in a polished editorial-style single-page experience.</p>
+
+<h2 id="project-links">Project Links</h2>
+
+<ul>
+<li><strong>Live site:</strong> https://lexy-lamparelli-portfolio.vercel.app/</li>
+<li><strong>GitHub repository:</strong> https://github.com/Crespo1301/Lexy-Lamparelli-Portfolio</li>
+<li><strong>Reference inspiration noted during design exploration:</strong> https://skysocietyresource.com/portfolio-christine</li>
+</ul>
+
+<h2 id="project-stack">Project Stack</h2>
+
+<ul>
+<li>React</li>
+<li>Vite</li>
+<li>CSS split by concern into shared style files</li>
+<li>Vercel deployment</li>
+<li>GitHub version control</li>
+</ul>
+
+<h2 id="content-summary">Content Summary</h2>
+
+<h3 id="profile">Profile</h3>
+
+<ul>
+<li><strong>Name:</strong> Alexia Lamparelli</li>
+<li><strong>Title:</strong> Microinfluencer / Content Creator</li>
+<li><strong>Location:</strong> Boston, MA</li>
+<li><strong>Email:</strong> lexylamps222@gmail.com</li>
+</ul>
+
+<h3 id="niche">Niche</h3>
+
+<ul>
+<li>Lifestyle</li>
+<li>Fashion</li>
+<li>Fitness</li>
+<li>Skincare</li>
+<li>Hair care</li>
+</ul>
+
+<h3 id="social-links">Social Links</h3>
+
+<ul>
+<li><strong>TikTok:</strong> https://www.tiktok.com/@lexylamparelli?<em>r=1&amp;</em>t=ZT-94ssaRIAGYY</li>
+<li><strong>Instagram:</strong> https://www.instagram.com/lexylamps?igsh=MW00OTR6NG82b2RhOA%3D%3D&amp;utm_source=qr</li>
+<li><strong>Pinterest:</strong> https://pin.it/4b6npcTB5</li>
+</ul>
+
+<h3 id="highlighted-tiktok-links">Highlighted TikTok Links</h3>
+
+<ul>
+<li>https://www.tiktok.com/t/ZTkJDyxog/</li>
+<li>https://www.tiktok.com/t/ZTkJD6KHf/</li>
+<li>https://www.tiktok.com/t/ZTkJDYCTR/</li>
+<li>https://www.tiktok.com/t/ZTkJD2yep/</li>
+<li>https://www.tiktok.com/t/ZTkJDd4D7/</li>
+<li>https://www.tiktok.com/t/ZTkJDAeyN/</li>
+<li>https://www.tiktok.com/t/ZTkJDMk1M/</li>
+<li>https://www.tiktok.com/t/ZTkJDDe2V/</li>
+<li>https://www.tiktok.com/t/ZTkJDFDtN/</li>
+</ul>
+
+<h2 id="brand-visual-direction">Brand / Visual Direction</h2>
+
+<h3 id="visual-positioning">Visual Positioning</h3>
+
+<p>The site is designed to feel:</p>
+
+<ul>
+<li>editorial</li>
+<li>feminine</li>
+<li>modern</li>
+<li>warm</li>
+<li>polished</li>
+<li>portfolio-forward</li>
+</ul>
+
+<h3 id="primary-brand-color">Primary Brand Color</h3>
+
+<p>Current project styles are centered around a deep warm red and cream palette.</p>
+
+<p>Suggested working brand tokens based on the current build:</p>
+
+<ul>
+<li><strong>Primary red:</strong> <code>#B00F06</code></li>
+<li><strong>Cream background:</strong> <code>#FFF6F3</code></li>
+<li><strong>Dark text:</strong> <code>#241713</code></li>
+</ul>
+
+<blockquote>
+<p>Final production colors should always match the values defined in <code>src/styles/tokens.css</code>.</p>
+</blockquote>
+
+<h3 id="logos-brand-assets-in-use">Logos / Brand Assets in Use</h3>
+
+<p>The project currently uses image assets placed in the repo for:</p>
+
+<ul>
+<li>profile portrait</li>
+<li>work directory thumbnails</li>
+<li>Canva gallery previews</li>
+<li>social thumbnails</li>
+<li>brand/logo graphics in static asset folders</li>
+</ul>
+
+<h2 id="local-development">Local Development</h2>
+
+<pre><code class="language-bash">npm install
+npm run dev</code></pre>
+
+<h2 id="build">Build</h2>
+
+<pre><code class="language-bash">npm run build</code></pre>
+
+<h2 id="deployment">Deployment</h2>
+
+<p>This project is deployed through Vercel from GitHub. Pushing to the configured branch triggers a new deployment.</p>
+
+<h2 id="asset-pathing-note">Asset Pathing Note</h2>
+
+<p>For deployed images, use static public paths such as:</p>
+
+<pre><code class="language-js">image: '/assets/Canva/canva-work-9.png'</code></pre>
+
+<p>Do <strong>not</strong> use runtime URLs that begin with <code>/src/...</code> for deployed static images.</p>
+
+<h2 id="project-structure">Project Structure</h2>
+
+<pre><code class="language-text">src/
+  components/
+  data/
+  styles/
+  App.jsx
+  main.jsx
+
+public/
+  assets/
+    Canva/
+    TikTok/
+    brand-logo/</code></pre>
+
+<h2 id="design-and-ip-reference-note">Design and IP / Reference Note</h2>
+
+<p>This project was built as an original coded portfolio implementation for a client-facing personal brand site. A reference site was reviewed during visual exploration, but the final implementation should remain based on:</p>
+
+<ul>
+<li>original copy</li>
+<li>original code</li>
+<li>original layout decisions</li>
+<li>licensed, owned, or authorized images/assets only</li>
+</ul>
+
+<h3 id="important-copyright-fair-use-notes">Important Copyright / Fair Use Notes</h3>
+
+<p>This section is a practical project note, not legal advice.</p>
+
+<ul>
+<li>Copyright generally protects <strong>original expression</strong>, not general ideas, themes, systems, or methods.</li>
+<li>Website copy, photos, artwork, and other original creative assets can be protected.</li>
+<li>“Fair use” is <strong>case-specific</strong> and is not guaranteed just because a project is inspired by another design.</li>
+<li>Using another site for broad inspiration is different from copying its exact text, graphics, source code, or distinctive protected assets.</li>
+<li>To reduce risk, this project should avoid reusing any third-party protected copy, images, logos, or code unless permission or a license exists.</li>
+<li>If there is ever concern about similarity, the safest path is to further differentiate layout details, copy, assets, and interactions, or consult a licensed attorney.</li>
+</ul>
+
+<h2 id="final-production-checklist">Final Production Checklist</h2>
+
+<ul>
+<li>Confirm all image paths resolve correctly on Vercel</li>
+<li>Replace any remaining placeholder descriptions</li>
+<li>Replace any temporary placeholder images</li>
+<li>Confirm mobile spacing across all sections</li>
+<li>Verify all Canva/TikTok/Instagram links</li>
+<li>Confirm final asset ownership or permission status</li>
+<li>Run a final Lighthouse/performance pass before handoff</li>
+</ul>
+
+<h2 id="status">Status</h2>
+
+<p>Ready for final polish and deployment review.</p>
+                    <p><a href="/">Return to portfolio</a></p>
+        </main>
+    </article>
+</body>
+</html>
