@@ -16,7 +16,7 @@ export const siteContent = {
   },
   about: {
     name: 'Alexia Lamparelli',
-    portraitImage: '/assets/Alexia-Headshot-2.HEIC',
+    portraitImage: '/assets/Alexia-Headshot-2.jpg',
     text: [
       'I am a microinfluencer and content creator based in Boston, creating lifestyle, fashion, fitness, skincare, and hair care content with a polished, approachable point of view.',
       'Currently serving as an Account Manager at National Corporate Housing, I specialize in tailored housing solutions that make relocations, extended stays, and corporate assignments feel effortless through clear communication, strong organization, and a client-first mindset.',
