@@ -754,3 +754,39 @@
   color: #fff6f3;
 }
 
+/* Launch polish: ensure all gallery images fully occupy their containers */
+.gallery-media,
+.social-card-media,
+.gallery-modal-media,
+.gallery-modal-media-social {
+  overflow: hidden;
+}
+
+.gallery-media img,
+.social-card-media img,
+.gallery-modal-media img,
+.gallery-modal-media-social img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Final targeted fix: Social Showcase previews should crop horizontally, not leave side columns */
+.social-card-media {
+  background: transparent;
+}
+
+.social-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: scaleX(1.08);
+  transform-origin: center center;
+}
+
+.social-card-media-button:hover img {
+  transform: scaleX(1.08);
+}
