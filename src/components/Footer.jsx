@@ -10,7 +10,7 @@ export default function Footer({ name }) {
       </div>
       <div className="container footer-inner footer-inner-bottom">
         <p className="footer-credit">
-          Designed and developed by <a href="https://carloscrespo.info/" target="_blank" rel="noreferrer">CSolutions — Boston Office</a>
+          Designed and developed by <a href="https://carloscrespo.info/" target="_blank" rel="noreferrer">CSolutions, Boston Office</a>
         </p>
       </div>
     </footer>

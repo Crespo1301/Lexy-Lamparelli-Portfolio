@@ -56,26 +56,22 @@ export const siteContent = {
     {
       title: 'Canva Work',
       href: '#canva-work',
-      placeholderLabel: 'CANVA DESIGN PROJECTS',
-      placeholderClass: 'placeholder-cloud',
+      meta: '12 design projects',
     },
     {
       title: 'Social Media',
       href: '#social-media',
-      placeholderLabel: 'TikTok & Instagram highlights',
-      placeholderClass: 'placeholder-cloud',
+      meta: 'TikTok · Instagram · Pinterest',
     },
     {
       title: 'Experience',
       href: '#experience',
-      placeholderLabel: 'Marketing & client-facing roles',
-      placeholderClass: 'placeholder-cloud',
+      meta: 'National Corporate Housing · Bozzuto',
     },
     {
       title: 'Contact',
       href: '#contact',
-      placeholderLabel: 'Email & social links',
-      placeholderClass: 'placeholder-cloud',
+      meta: 'Start a collaboration',
     },
   ],
   canvaProjects: [

@@ -4,8 +4,9 @@ Custom React + Vite portfolio site for **Alexia “Lexy” Lamparelli**, built t
 
 ## Project Links
 
-- **Live site:** https://lexy-lamparelli-portfolio.vercel.app/
+- **Live site:** https://www.lexylamparelli.cv/
 - **GitHub repository:** https://github.com/Crespo1301/Lexy-Lamparelli-Portfolio
+- **Hosting:** Vercel (auto-deploys on push to `main`; bare domain redirects to `www`)
 - **Reference inspiration noted during design exploration:** https://skysocietyresource.com/portfolio-christine
 
 ## Project Stack
@@ -147,4 +148,6 @@ This section is a practical project note, not legal advice.
 - Run a final Lighthouse/performance pass before handoff
 
 ## Status
-Ready for final polish and deployment review.
+Live in production at https://www.lexylamparelli.cv/. Active maintenance.
+See `CHANGELOG.md` for release history, `HANDOVER.md` for current state, and
+`docs/next-steps/refactor-cleanup-plan.md` for the cleanup backlog.
