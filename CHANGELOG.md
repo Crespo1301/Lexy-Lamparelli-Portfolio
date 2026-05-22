@@ -5,6 +5,24 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project
 uses [Semantic Versioning](https://semver.org/). Versioning baseline starts at
 `1.0.0` (the project was unversioned, `0.0.0`, before this).
 
+## [1.0.2] - 2026-05-22
+
+Copy voice pass (client-approved) + icon polish. Tag `v1.0.2`. Build verified;
+no em dashes or banned words; quotes already straight.
+
+### Changed
+- **Copy voice pass** (`src/data/siteContent.js`, audit P2 item 2): de-triaded the
+  bio and section intros that leaned on stacked rule-of-three lists and press-release
+  cadence. Varied list length (some pairs, one single, one deliberate longer list),
+  warmed the bio into first person, and cut buzz-pairs ("creative thinking and polished
+  execution") and repeated "elevated" phrasing. All facts, titles, companies, and the
+  under-a-year promotion preserved. Client (Lexy) signed off on copy edits.
+- **Degree icon** (`SkillsSection.jsx`, `content.css`): replaced the 🎓 emoji with an
+  inline SVG mortarboard that inherits the brand red via `currentColor` and is
+  `aria-hidden` (decorative; the degree text sits beside it). Crisper at all sizes and
+  consistent with the brand. Partially addresses audit P3 (decorative glyphs to SVG);
+  the `✦` sparks and `◉` list bullets remain as glyphs.
+
 ## [1.0.1] - 2026-05-22
 
 Maintenance release: audit P2 + refactor Tier 2 CSS consolidation. Tag `v1.0.1`.

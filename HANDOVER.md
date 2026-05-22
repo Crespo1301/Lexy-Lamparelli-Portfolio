@@ -8,8 +8,8 @@ Last updated: 2026-05-22
   (auto-deploys on push to `main`; bare domain redirects to `www`).
 - Stack: single-page **Vite + React 19**, no router. Content is data-driven from
   `src/data/siteContent.js`; components are presentational.
-- Version: **1.0.1** (`package.json`). 1.0.1 is a no-visual-change maintenance release
-  (audit P2 + refactor Tier 2 CSS); 1.0.0 established the versioning baseline.
+- Version: **1.0.2** (`package.json`). 1.0.2 = client-approved copy voice pass + degree
+  icon SVG; 1.0.1 = no-visual-change maintenance (audit P2 nav + Tier 2 CSS); 1.0.0 baseline.
 
 ## Shipped this session (all pushed to `main`)
 
@@ -48,8 +48,12 @@ Writing + design audit against `docs/MASTER_RULES_AI.md`, impeccable, and ui-ux-
 - `max-height` nav transition replaced with a `grid-template-rows` transition (no layout
   thrash, no magic `22rem`, reduced-motion guard) in `layout.css`.
 
-Remaining audit items: copy voice pass (P2, needs client sign-off), image WebP + dimensions
-(P2), decorative glyphs to SVG (P3). See the audit doc.
+**Audit resolved 2026-05-22 (v1.0.2):**
+- Copy voice pass (P2 #2): de-triaded bio/intros, client-approved. Done.
+- Degree 🎓 emoji to inline SVG mortarboard (P3 glyphs, partial). Done.
+
+Remaining audit items: image WebP + dimensions (P2 #4), remaining decorative glyphs
+`✦`/`◉` to SVG (P3), body font Inter (P3, optional). See the audit doc.
 
 ## Refactor & cleanup
 

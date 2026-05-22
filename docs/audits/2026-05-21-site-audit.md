@@ -41,7 +41,10 @@ are intentional choices, not defaults. The only detector flag here is the body f
    - `src/components/SocialShowcase.jsx`: line 79 (`Alexia’s`)
    Fix: replace `’` with `'`. Quick, mechanical, low risk.
 
-2. **[P2] Over-polished prose + rule-of-three habit (severity 4-5).** The bio and section
+2. **[P2] Over-polished prose + rule-of-three habit (severity 4-5).** RESOLVED 2026-05-22
+   (v1.0.2): medium copy-voice pass on `siteContent.js`, client-approved. De-triaded the
+   flagged lists, varied list length, warmed the bio to first person, cut buzz-pairs.
+   Facts preserved. Original finding below.
    intros lean on stacked triads and press-release phrasing, which is exactly the pattern
    the rules call out. Examples:
    - "relocations, extended stays, and corporate assignments"
@@ -80,7 +83,10 @@ are intentional choices, not defaults. The only detector flag here is the body f
    The "My Work" section no longer uses images, so this applies to the Canva gallery and
    social showcase.
 
-5. **[P3] Decorative unicode glyphs instead of SVG.** `✦` sparks in `About.jsx`, and `↗`,
+5. **[P3] Decorative unicode glyphs instead of SVG.** PARTIAL 2026-05-22 (v1.0.2): the 🎓
+   degree emoji was replaced with an inline `currentColor` SVG mortarboard (`aria-hidden`).
+   The `✦` sparks (`About.jsx`) and `◉` list bullets remain. Original finding below.
+   `✦` sparks in `About.jsx`, and `↗`,
    `‹`, `›`, `×` in the showcases. ui-ux-pro-max recommends SVG icons over glyphs for
    crisp, consistent rendering. The modal control glyphs already have `aria-label`s (good);
    the `↗` and `✦` are decorative and should be `aria-hidden` or replaced with SVG.

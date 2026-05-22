@@ -19,8 +19,8 @@ export const siteContent = {
     portraitImage: '/assets/Alexia-Headshot-2.jpg',
     text: [
       'I am a microinfluencer and content creator based in Boston, creating lifestyle, fashion, fitness, skincare, and hair care content with a polished, approachable point of view.',
-      'Currently serving as an Account Manager at National Corporate Housing, I specialize in tailored housing solutions that make relocations, extended stays, and corporate assignments feel effortless through clear communication, strong organization, and a client-first mindset.',
-      'Previously, I worked as Director of Resident Experience at Bozzuto, where I blended my Digital Arts background from California State University San Marcos with social media strategy, content creation, and hospitality marketing to strengthen community engagement and elevate the resident experience.',
+      'I am an Account Manager at National Corporate Housing, where I build tailored housing solutions for relocations and corporate assignments. The work comes down to clear communication and keeping every detail organized for the client.',
+      'Before that, I was Director of Resident Experience at Bozzuto. I brought my Digital Arts background from California State University San Marcos into the social content and marketing side, and used it to strengthen how residents connected with their community.',
     ],
     badges: {
       role: 'Microinfluencer / Content Creator',
@@ -32,10 +32,10 @@ export const siteContent = {
   skills: {
     degree: 'California State University San Marcos',
     certifications: [
-      'Account Manager at National Corporate Housing with a focus on tailored client solutions and seamless communication.',
+      'Account Manager at National Corporate Housing, focused on tailored client solutions.',
       'Advanced from Sales and Marketing Associate to Director of Resident Experience in under a year at Bozzuto.',
       'Experienced in social media content creation, hospitality-driven marketing, and community engagement strategy.',
-      'Known for attention to detail, adaptability, organization, and creating experiences that feel thoughtful and elevated.',
+      'Detail-oriented and adaptable, with a knack for making everyday experiences feel thoughtful.',
     ],
     tools: [
       'Content Creation',
@@ -242,25 +242,25 @@ export const siteContent = {
   experience: {
     heading: 'Professional Experience',
     intro:
-      'Alexia\'s background blends client-facing account management, hospitality-driven marketing, and social content creation, giving her a strong mix of creative thinking and polished execution.',
+      'Alexia\'s background spans client-facing account management, hospitality marketing, and social content, so she moves easily between creative and operational work.',
     cards: [
       {
         title: 'National Corporate Housing',
         logo: '/assets/brand-logo/nch-logo.png',
         logoLabel: 'Replace with NCH logo',
-        text: 'Currently serving as an Account Manager, delivering tailored housing solutions for relocations, extended stays, and corporate assignments with a strong focus on organization, communication, and client satisfaction.',
+        text: 'Currently an Account Manager, delivering tailored housing solutions for relocations and corporate assignments, with a focus on staying organized and keeping clients informed.',
       },
       {
         title: 'Bozzuto',
         logo: '/assets/brand-logo/bozzuto.jpg',
         logoLabel: 'Replace with Bozzuto logo',
-        text: 'Previously served as Director of Resident Experience, creating engaging social media content and hospitality-forward marketing that strengthened community connection and elevated day-to-day resident experiences.',
+        text: 'Previously Director of Resident Experience, creating social media content and hospitality marketing that strengthened how residents connected with their community.',
       },
       {
         title: 'Growth & Strengths',
         logo: '/assets/brand-logo/skills-logo.jpg',
         logoLabel: 'Replace with skills mark',
-        text: 'Alexia advanced from Sales and Marketing Associate to Director of Resident Experience in under a year, reflecting her adaptability, attention to detail, and ability to merge strategy, creativity, and execution.',
+        text: 'Alexia advanced from Sales and Marketing Associate to Director of Resident Experience in under a year, a jump that reflects how quickly she adapts and how well she merges strategy with execution.',
       },
     ],
   },

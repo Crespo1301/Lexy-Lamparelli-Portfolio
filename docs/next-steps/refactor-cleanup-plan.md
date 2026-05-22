@@ -46,13 +46,20 @@ fixed `.gitignore` (`.mcp.json`, `.code-review-graph/`, `*.zip`), and scoped ESL
      (no JS reference, verified): `.gallery-grid`, `.social-scroll` (+ scrollbar pseudos),
      `.social-card-scroll`, `.topbar-chip`, `.topbar-label`. Net -34 lines.
 
-6. **Reorganize styles by concern/component.**
+6. **Reorganize styles by concern/component.** — DECIDED: Option A (not started).
    - `content.css` mixes bio, skills, work-directory, tool cards, and "final polish"
      overrides; `responsive.css` scatters work-directory overrides across 5 breakpoints.
    - Option A (low effort): keep the split files, but group each section's rules together
      and co-locate its responsive overrides.
    - Option B (higher effort): move to CSS Modules or per-component stylesheets so each
      component owns its styles. Decide before starting; do not half-migrate.
+   - **Senior-dev decision (2026-05-22): Option A.** A 2,200-line single-author site has no
+     scoping problem worth a full Modules migration; Option B would touch every component's
+     `className` with no test suite on a live client site. Do `content.css` then
+     `responsive.css` first (pull the scattered work-directory breakpoint rules together);
+     pure move-and-comment, no selector/value changes. Verify with a build + per-breakpoint
+     visual smoke test. `portfolio.css` follows if time allows. Schedule LAST of the
+     remaining work (internal-only, highest regression surface).
 
 7. **Normalize the color system.** — DONE 2026-05-22 (v1.0.1).
    - `tokens.css` defines `--cream: #f1efeb`, but `#fff6f3` (a lighter cream) is hardcoded
@@ -75,6 +82,15 @@ fixed `.gitignore` (`.mcp.json`, `.code-review-graph/`, `*.zip`), and scoped ESL
 10. **Image weight.** Canva PNGs are large. Consider WebP/AVIF plus explicit `width`/`height`
     to cut transfer and prevent layout shift (CLS). Relevant to the Canva gallery and social
     sections (the "My Work" directory no longer uses images).
+    - **Senior-dev decision (2026-05-22): WebP only (no AVIF, no `<picture>` fallback),
+      two sizes per asset (~480w card thumbnail via `previewImage`, ~1200w modal via
+      `modalImage`), explicit `width`/`height` on every `<img>`, generated at build time via
+      a Vite plugin (`vite-imagetools` or `vite-plugin-image-optimizer`).** Context: ~6.9MB
+      of PNGs, largest 1.5MB, all rendered with no dimensions; the modal currently reuses the
+      full-size card PNG. AVIF/`<picture>` not worth the complexity for ~12 images given
+      universal WebP support. The data shape already has `previewImage`/`modalImage` fields
+      (mostly unused). This is the **highest user-facing payoff** of the remaining work; do it
+      before the CSS reorg so the closing Lighthouse run (#12) measures the optimized state.
 
 ## Tier 4: Larger / optional
 

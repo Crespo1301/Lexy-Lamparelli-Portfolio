@@ -15,7 +15,9 @@ export default function SkillsSection({ skills }) {
         <div className="skills-grid">
           <div className="skills-copy-panel">
             <div className="degree-pill">
-              <span className="degree-pill-icon">🎓</span>
+              <svg className="degree-pill-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M12 3 1 8l11 5 9-4.09V15h2V8L12 3zM5 13.18v3L12 20l7-3.82v-3L12 17l-7-3.82z" />
+              </svg>
               <span>{skills.degree}</span>
             </div>
 

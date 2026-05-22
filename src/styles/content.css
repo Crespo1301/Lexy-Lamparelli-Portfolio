@@ -261,7 +261,9 @@
 }
 
 .degree-pill-icon {
-  font-size: 1.15rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
 }
 
 .certification-list {
