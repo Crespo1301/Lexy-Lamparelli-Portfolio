@@ -10,7 +10,6 @@
 .bio-grid,
 .work-directory-grid,
 .portfolio-heading-row,
-.gallery-grid,
 .experience-grid,
 .contact-panel {
   min-width: 0;
@@ -22,7 +21,7 @@
 .contact-section,
 .footer {
   background: var(--red);
-  color: #fff6f3;
+  color: var(--cream-light);
 }
 
 .bio-grid {
@@ -320,7 +319,7 @@
 }
 
 .work-directory-title {
-  color: #fff6f3;
+  color: var(--cream-light);
 }
 
 .work-directory-grid {

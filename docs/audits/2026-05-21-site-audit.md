@@ -66,7 +66,9 @@ are intentional choices, not defaults. The only detector flag here is the body f
    on close. Keyboard users can tab out behind the overlay. Fix: focus the close button on
    open, trap Tab within the panel, restore focus on close. WCAG 2.4.3 / 2.1.2.
 
-3. **[P2] `max-height` transition causes layout thrash.** `layout.css:88`
+3. **[P2] `max-height` transition causes layout thrash.** RESOLVED 2026-05-22 (v1.0.1):
+   replaced with a `grid-template-rows: 0fr -> 1fr` transition, magic `22rem` removed,
+   `prefers-reduced-motion` guard added. Original finding below. `layout.css:88`
    (`transition: max-height 0.3s`) animates a layout property. The detector also flags the
    same pattern in the dead `global.css`. Fix: animate `transform`/`opacity`, or use a
    `grid-template-rows: 0fr -> 1fr` technique. Also, `mobile-nav-open { max-height: 22rem }`

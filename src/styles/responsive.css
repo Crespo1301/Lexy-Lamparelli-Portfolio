@@ -57,14 +57,8 @@
     gap: 0.75rem;
   }
 
-  .topbar-chip,
-  .topbar-label,
   .topbar-brand {
     font-size: 0.74rem;
-  }
-
-  .topbar-label {
-    display: none;
   }
 
   .cover-section {
@@ -177,15 +171,13 @@
   }
 
   .tools-grid,
-  .gallery-grid,
   .portfolio-dark .social-grid,
   .experience-grid,
   .work-directory-grid {
     grid-template-columns: 1fr;
   }
 
-  .gallery-scroll,
-  .social-scroll {
+  .gallery-scroll {
     grid-auto-columns: minmax(15.5rem, 84vw);
   }
 

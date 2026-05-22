@@ -39,9 +39,12 @@ fixed `.gitignore` (`.mcp.json`, `.code-review-graph/`, `*.zip`), and scoped ESL
 
 ## Tier 2: CSS consolidation (medium risk)
 
-5. **Audit for more dead CSS.**
+5. **Audit for more dead CSS.** — DONE 2026-05-22 (v1.0.1).
    - The "My Work" redesign already removed the unused `.placeholder-wave/-bloom/-cloud/-floral`
      gradient classes. Sweep `content.css` / `portfolio.css` for other orphaned rules.
+   - Swept all `src/styles/*.css` against component/data markup. Removed 5 orphan classes
+     (no JS reference, verified): `.gallery-grid`, `.social-scroll` (+ scrollbar pseudos),
+     `.social-card-scroll`, `.topbar-chip`, `.topbar-label`. Net -34 lines.
 
 6. **Reorganize styles by concern/component.**
    - `content.css` mixes bio, skills, work-directory, tool cards, and "final polish"
@@ -51,10 +54,13 @@ fixed `.gitignore` (`.mcp.json`, `.code-review-graph/`, `*.zip`), and scoped ESL
    - Option B (higher effort): move to CSS Modules or per-component stylesheets so each
      component owns its styles. Decide before starting; do not half-migrate.
 
-7. **Normalize the color system.**
+7. **Normalize the color system.** — DONE 2026-05-22 (v1.0.1).
    - `tokens.css` defines `--cream: #f1efeb`, but `#fff6f3` (a lighter cream) is hardcoded
      in many places as on-red text. Promote it to a token (for example `--cream-light`) and
      replace the literals. README mislabeled cream as `#FFF6F3`; fix once tokens settle.
+   - Added `--cream-light: #fff6f3`; replaced all 10 hex literals (8 `portfolio.css`,
+     2 `content.css`). Remaining: a few `rgba(255, 246, 243, ...)` alpha variants left as-is
+     (a solid token can't carry per-use opacity). README `#FFF6F3` note still open.
 
 ## Tier 3: Code quality & a11y (medium risk)
 

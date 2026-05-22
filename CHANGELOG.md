@@ -5,6 +5,30 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project
 uses [Semantic Versioning](https://semver.org/). Versioning baseline starts at
 `1.0.0` (the project was unversioned, `0.0.0`, before this).
 
+## [1.0.1] - 2026-05-22
+
+Maintenance release: audit P2 + refactor Tier 2 CSS consolidation. Tag `v1.0.1`.
+No visual or content changes; build verified, lint clean (one pre-existing Tier 3
+hook warning remains).
+
+### Added
+- `--cream-light: #fff6f3` token in `tokens.css`. The lighter on-red cream was
+  hardcoded in 10 places (8 in `portfolio.css`, 2 in `content.css`); all now use
+  the token. Refactor plan Tier 2 item 7.
+
+### Changed
+- **Mobile nav transition** (`layout.css`): replaced the `max-height` animation
+  (which animates a layout property and relied on a magic `22rem` cap) with a
+  `grid-template-rows: 0fr -> 1fr` transition. No layout thrash, no magic number,
+  and a `prefers-reduced-motion` guard disables the transition. Audit P2 item 3.
+
+### Removed
+- **Dead CSS** (refactor plan Tier 2 item 5): orphan classes with no JS reference,
+  confirmed against component markup, removed across four files: `.gallery-grid`
+  (the gallery uses `.gallery-scroll`), `.social-scroll` + its scrollbar pseudos
+  and `.social-card-scroll` (the social section uses `.social-grid`/`.social-card`),
+  and `.topbar-chip` / `.topbar-label` (unused topbar variants). Net -34 lines of CSS.
+
 ## [1.0.0] - 2026-05-21
 
 First formally versioned production release. Tag `v1.0.0`.

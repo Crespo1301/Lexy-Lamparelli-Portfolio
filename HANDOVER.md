@@ -1,6 +1,6 @@
 # Handover: Lexy Lamparelli Portfolio
 
-Last updated: 2026-05-21
+Last updated: 2026-05-22
 
 ## Current state
 
@@ -8,7 +8,8 @@ Last updated: 2026-05-21
   (auto-deploys on push to `main`; bare domain redirects to `www`).
 - Stack: single-page **Vite + React 19**, no router. Content is data-driven from
   `src/data/siteContent.js`; components are presentational.
-- Version: **1.0.0** (`package.json`). Versioning baseline established this session.
+- Version: **1.0.1** (`package.json`). 1.0.1 is a no-visual-change maintenance release
+  (audit P2 + refactor Tier 2 CSS); 1.0.0 established the versioning baseline.
 
 ## Shipped this session (all pushed to `main`)
 
@@ -43,14 +44,21 @@ Writing + design audit against `docs/MASTER_RULES_AI.md`, impeccable, and ui-ux-
 - Lightbox focus management: new `src/hooks/useModalA11y.js` (focus move + Tab trap + restore
   + scroll lock), used by both `CanvaGallery` and `SocialShowcase`; close button gets initial focus.
 
-Remaining audit items (P2/P3): copy voice pass, `max-height` nav transition, image WebP +
-dimensions, decorative glyphs to SVG. See the audit doc.
+**Audit P2 resolved 2026-05-22 (v1.0.1):**
+- `max-height` nav transition replaced with a `grid-template-rows` transition (no layout
+  thrash, no magic `22rem`, reduced-motion guard) in `layout.css`.
+
+Remaining audit items: copy voice pass (P2, needs client sign-off), image WebP + dimensions
+(P2), decorative glyphs to SVG (P3). See the audit doc.
 
 ## Refactor & cleanup
 
 Tier 1 of `docs/next-steps/refactor-cleanup-plan.md` is DONE (2026-05-21): deleted dead
 `global.css`, removed `src.zip`, fixed `.gitignore`, scoped ESLint (`npm run lint` now clean,
-0 errors). `public/readme.html` was kept (it is linked from the footer). Tier 2 to 4 remain.
+0 errors). `public/readme.html` was kept (it is linked from the footer).
+
+Tier 2 items 5 (dead-CSS sweep) and 7 (cream token) are DONE (2026-05-22, v1.0.1). Remaining
+Tier 2: item 6 (reorganize styles by concern, Option A vs B not yet decided). Tier 3 to 4 remain.
 
 ## Carried-over follow-ups
 
