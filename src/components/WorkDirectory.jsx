@@ -1,17 +1,28 @@
+import { useRef } from 'react'
+import useRevealOnScroll from '../hooks/useRevealOnScroll'
+
 export default function WorkDirectory({ workDirectory }) {
+  const sectionRef = useRef(null)
+  useRevealOnScroll(sectionRef, [workDirectory.length])
+
   return (
-    <section className="work-directory" id="my-work">
+    <section className="work-directory" id="my-work" ref={sectionRef}>
       <div className="container">
-        <div className="work-directory-heading">
+        <div className="work-directory-heading" data-reveal>
           <p className="section-label">Explore</p>
           <h2 className="work-directory-title" aria-label="My Work">
-            <span className="work-directory-script">M</span>{' '}<span className="title-rest">y Work</span>
+            <span className="work-directory-script">M</span>{' '}<span className="title-rest">y Work</span>
           </h2>
         </div>
 
         <div className="work-directory-grid">
           {workDirectory.map((item, index) => (
-            <article key={item.href} className="work-directory-card">
+            <article
+              key={item.href}
+              className="work-directory-card"
+              data-reveal
+              style={{ '--reveal-delay': `${Math.min(index * 80, 320)}ms` }}
+            >
               <a href={item.href} className="work-directory-link">
                 <span className="work-directory-index" aria-hidden="true">
                   {String(index + 1).padStart(2, '0')}

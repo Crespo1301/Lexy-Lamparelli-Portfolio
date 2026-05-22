@@ -197,8 +197,11 @@
 
 .spark {
   position: absolute;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.92);
+  width: 1.35rem;
+  height: 1.35rem;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .spark-1 {
@@ -287,8 +290,10 @@
 }
 
 .certification-icon {
-  margin-top: 0.15rem;
-  font-size: 0.8rem;
+  margin-top: 0.32rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  flex-shrink: 0;
 }
 
 .tools-grid {
@@ -432,6 +437,10 @@
   .work-directory-card:focus-within {
     transform: none;
   }
+
+  .spark {
+    animation: none;
+  }
 }
 
 
@@ -545,5 +554,45 @@
     opacity: 0.66;
     transform: scale(1.06) rotate(2deg);
     filter: drop-shadow(0 0 0.36rem rgba(255, 255, 255, 0.32));
+  }
+}
+
+
+/* Scroll reveal. Hidden state is gated by .reveal-ready, which useRevealOnScroll
+   adds to each section root once JS is active, so content stays visible without JS
+   and never gets stuck invisible if the observer never fires. */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+/* Only the hidden state sets transform, so once revealed the element falls back
+   to its own resting/hover transform instead of being pinned by the reveal rule. */
+.reveal-ready [data-reveal]:not(.is-revealed) {
+  transform: translateY(1.6rem);
+}
+
+.reveal-ready [data-reveal].is-revealed {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .reveal-ready [data-reveal]:not(.is-revealed) {
+    transform: translateY(1rem);
+  }
+
+  .reveal-ready [data-reveal] {
+    transition-duration: 0.55s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready [data-reveal],
+  .reveal-ready [data-reveal]:not(.is-revealed) {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

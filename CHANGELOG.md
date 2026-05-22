@@ -5,6 +5,40 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project
 uses [Semantic Versioning](https://semver.org/). Versioning baseline starts at
 `1.0.0` (the project was unversioned, `0.0.0`, before this).
 
+## [1.1.0] - 2026-05-22
+
+Scroll-reveal motion + decorative-glyph polish + visible bio twinkle. Tag `v1.1.0`.
+Build verified; lint clean (one pre-existing Tier 3 hook warning). Visual change;
+mobile-tuned and `prefers-reduced-motion` respected throughout.
+
+### Added
+- **Scroll-reveal animation, site-wide.** Sections fade and rise into view as you scroll.
+  The infrastructure (the `useRevealOnScroll` hook, `data-reveal` attributes, and
+  `--reveal-delay` stagger vars) already existed but had **no CSS**, so the existing Canva
+  and social card reveals were silently doing nothing (the styles were likely lost when the
+  dead `global.css` was removed in Tier 1). This release:
+  - Adds the reveal CSS (`content.css`), gated behind a `.reveal-ready` class that the hook
+    adds only once JS is active, so content is never stuck invisible without JS or
+    IntersectionObserver. Hidden state sets `transform` only via `:not(.is-revealed)` so it
+    does not override cards' `:hover` transforms once revealed.
+  - Extends reveal to `About`, `SkillsSection`, `WorkDirectory`, `Experience`, and `Contact`
+    (previously only the two showcases were wired). Staggered card cascades on the work
+    directory, experience, and tool grids.
+  - Mobile: shorter rise (1rem vs 1.6rem) and faster duration under 640px.
+  - Adds a no-`IntersectionObserver` fallback (reveal immediately) in the hook.
+
+### Changed
+- **Bio twinkle now visible** (`content.css`, audit follow-up): Lexy's sparkle accents were
+  too faint (semi-transparent at 0.55 alpha, 1rem). Brightened to 0.92 white, enlarged to
+  1.35rem, and lifted above the portrait (`z-index`). The twinkle animation is now disabled
+  under `prefers-reduced-motion` (it was not before).
+
+### Removed
+- **Remaining decorative emoji/unicode glyphs to SVG** (audit P3): the `✦` bio sparks and the
+  `◉` certification bullets are now inline `currentColor` SVGs (`aria-hidden`), matching the
+  earlier 🎓 swap. The modal control glyphs (`↗ ‹ › × →`) were already `aria-hidden` and were
+  left as-is.
+
 ## [1.0.2] - 2026-05-22
 
 Copy voice pass (client-approved) + icon polish. Tag `v1.0.2`. Build verified;

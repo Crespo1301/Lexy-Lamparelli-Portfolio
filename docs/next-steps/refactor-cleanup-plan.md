@@ -82,6 +82,8 @@ fixed `.gitignore` (`.mcp.json`, `.code-review-graph/`, `*.zip`), and scoped ESL
 10. **Image weight.** Canva PNGs are large. Consider WebP/AVIF plus explicit `width`/`height`
     to cut transfer and prevent layout shift (CLS). Relevant to the Canva gallery and social
     sections (the "My Work" directory no longer uses images).
+    - **Full build brief: `docs/next-steps/image-optimization-brief.md`** (self-contained,
+      ready to execute later).
     - **Senior-dev decision (2026-05-22): WebP only (no AVIF, no `<picture>` fallback),
       two sizes per asset (~480w card thumbnail via `previewImage`, ~1200w modal via
       `modalImage`), explicit `width`/`height` on every `<img>`, generated at build time via

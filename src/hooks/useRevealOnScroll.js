@@ -8,6 +8,16 @@ export default function useRevealOnScroll(rootRef, deps = []) {
     const elements = Array.from(root.querySelectorAll('[data-reveal]'))
     if (!elements.length) return undefined
 
+    // Signal CSS that JS is active. The hidden/animated state is gated on this
+    // class so content stays visible when JS or IntersectionObserver is missing,
+    // and never gets stuck invisible if the observer never fires.
+    root.classList.add('reveal-ready')
+
+    if (typeof IntersectionObserver === 'undefined') {
+      elements.forEach((element) => element.classList.add('is-revealed'))
+      return undefined
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

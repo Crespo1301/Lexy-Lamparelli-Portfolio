@@ -1,14 +1,20 @@
+import { useRef } from 'react'
+import useRevealOnScroll from '../hooks/useRevealOnScroll'
+
 export default function Contact({ contact, socialLinks }) {
+  const sectionRef = useRef(null)
+  useRevealOnScroll(sectionRef)
+
   return (
-    <section className="contact-section" id="contact">
+    <section className="contact-section" id="contact" ref={sectionRef}>
       <div className="container contact-panel">
-        <div>
+        <div data-reveal>
           <p className="section-label">Contact</p>
           <h2 className="portfolio-title portfolio-title-light">{contact.heading}</h2>
           <p className="contact-copy">{contact.text}</p>
         </div>
 
-        <div className="contact-actions">
+        <div className="contact-actions" data-reveal style={{ '--reveal-delay': '90ms' }}>
           <a className="contact-email" href={`mailto:${contact.email}`}>
             {contact.email}
           </a>

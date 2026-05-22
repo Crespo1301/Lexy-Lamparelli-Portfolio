@@ -83,10 +83,11 @@ are intentional choices, not defaults. The only detector flag here is the body f
    The "My Work" section no longer uses images, so this applies to the Canva gallery and
    social showcase.
 
-5. **[P3] Decorative unicode glyphs instead of SVG.** PARTIAL 2026-05-22 (v1.0.2): the 🎓
-   degree emoji was replaced with an inline `currentColor` SVG mortarboard (`aria-hidden`).
-   The `✦` sparks (`About.jsx`) and `◉` list bullets remain. Original finding below.
-   `✦` sparks in `About.jsx`, and `↗`,
+5. **[P3] Decorative unicode glyphs instead of SVG.** RESOLVED 2026-05-22: 🎓 degree icon
+   (v1.0.2), then `✦` bio sparks and `◉` certification bullets (v1.1.0), all now inline
+   `currentColor` SVGs with `aria-hidden`. The modal controls (`↗ ‹ › × →`) were already
+   `aria-hidden` and were left as glyphs (acceptable per the original finding). Original
+   finding below. `✦` sparks in `About.jsx`, and `↗`,
    `‹`, `›`, `×` in the showcases. ui-ux-pro-max recommends SVG icons over glyphs for
    crisp, consistent rendering. The modal control glyphs already have `aria-label`s (good);
    the `↗` and `✦` are decorative and should be `aria-hidden` or replaced with SVG.
