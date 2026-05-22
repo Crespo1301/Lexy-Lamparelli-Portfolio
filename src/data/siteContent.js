@@ -202,7 +202,7 @@ export const siteContent = {
     {
       title: 'TikTok Highlights',
       platform: 'TikTok',
-      description: 'A selection of short-form TikTok content highlighting Alexia’s lifestyle, beauty, and fashion voice through polished, relatable video storytelling.',
+      description: 'A selection of short-form TikTok content highlighting Alexia\'s lifestyle, beauty, and fashion voice through polished, relatable video storytelling.',
       metric: 'Short-Form Content',
       thumbnail: '/assets/TikTok/tiktok1.png',
       links: [
@@ -215,7 +215,7 @@ export const siteContent = {
     {
       title: 'Instagram Highlights',
       platform: 'Instagram',
-      description: 'A curated look at Alexia’s Instagram presence, focused on visual consistency, personal branding, and aspirational lifestyle content.',
+      description: 'A curated look at Alexia\'s Instagram presence, focused on visual consistency, personal branding, and aspirational lifestyle content.',
       metric: 'Lifestyle Creator',
       thumbnail: '/assets/Instagram/instagram1.png',
       links: [
@@ -228,7 +228,7 @@ export const siteContent = {
     {
       title: 'Pinterest Highlights',
       platform: 'Pinterest',
-      description: 'A collection of inspiration-driven visuals that reflect Alexia’s beauty and fashion interests through trend-aware, image-led content.',
+      description: 'A collection of inspiration-driven visuals that reflect Alexia\'s beauty and fashion interests through trend-aware, image-led content.',
       metric: 'Beauty & Fashion Niche',
       thumbnail: '/assets/Instagram/pinterest.png',
       links: [
@@ -242,7 +242,7 @@ export const siteContent = {
   experience: {
     heading: 'Professional Experience',
     intro:
-      'Alexia’s background blends client-facing account management, hospitality-driven marketing, and social content creation, giving her a strong mix of creative thinking and polished execution.',
+      'Alexia\'s background blends client-facing account management, hospitality-driven marketing, and social content creation, giving her a strong mix of creative thinking and polished execution.',
     cards: [
       {
         title: 'National Corporate Housing',
@@ -265,7 +265,7 @@ export const siteContent = {
     ],
   },
   contact: {
-    heading: 'Let’s Work Together',
+    heading: 'Let\'s Work Together',
     text: 'For content creation, brand visuals, social media collaborations, or creative support, reach out by email or connect through social media.',
     email: 'lexylamps222@gmail.com',
   },

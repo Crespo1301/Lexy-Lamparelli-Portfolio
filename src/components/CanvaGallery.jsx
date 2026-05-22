@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import useRevealOnScroll from '../hooks/useRevealOnScroll'
+import useModalA11y from '../hooks/useModalA11y'
 
 const SWIPE_THRESHOLD = 48
 
 export default function CanvaGallery({ items }) {
   const sectionRef = useRef(null)
   const scrollRef = useRef(null)
+  const panelRef = useRef(null)
   const touchStartX = useRef(null)
   const modalTouchStartX = useRef(null)
   const [activeIndex, setActiveIndex] = useState(null)
@@ -17,11 +19,10 @@ export default function CanvaGallery({ items }) {
     return items?.[activeIndex] ?? null
   }, [activeIndex, items])
 
+  useModalA11y(!!activeItem, panelRef)
+
   useEffect(() => {
     if (!activeItem) return undefined
-
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
 
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
@@ -40,7 +41,6 @@ export default function CanvaGallery({ items }) {
     window.addEventListener('keydown', handleKeyDown)
 
     return () => {
-      document.body.style.overflow = previousOverflow
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [activeItem, items.length])
@@ -120,7 +120,7 @@ export default function CanvaGallery({ items }) {
             </div>
             <div className="portfolio-heading-actions">
               <p className="portfolio-intro">
-                A curated collection of Alexia’s Canva-based design work, including promotional graphics, branded assets, story templates,
+                A curated collection of Alexia's Canva-based design work, including promotional graphics, branded assets, story templates,
                 and polished visual content built for social and marketing use.
               </p>
               <div className="gallery-controls" aria-label="Canva gallery controls">
@@ -175,15 +175,15 @@ export default function CanvaGallery({ items }) {
       {activeItem && (
         <div className="gallery-modal" role="dialog" aria-modal="true" aria-label={`${activeItem.title} preview`}>
           <button type="button" className="gallery-modal-backdrop" aria-label="Close preview" onClick={() => setActiveIndex(null)} />
-          <div className="gallery-modal-panel" onTouchStart={handleModalTouchStart} onTouchEnd={handleModalTouchEnd}>
+          <div className="gallery-modal-panel" ref={panelRef} onTouchStart={handleModalTouchStart} onTouchEnd={handleModalTouchEnd}>
             <button type="button" className="gallery-modal-nav gallery-modal-nav-left" onClick={() => moveModal(-1)} aria-label="Show previous project">
-              ‹
+              <span aria-hidden="true">‹</span>
             </button>
             <button type="button" className="gallery-modal-nav gallery-modal-nav-right" onClick={() => moveModal(1)} aria-label="Show next project">
-              ›
+              <span aria-hidden="true">›</span>
             </button>
-            <button type="button" className="gallery-modal-close" onClick={() => setActiveIndex(null)} aria-label="Close preview">
-              ×
+            <button type="button" className="gallery-modal-close" onClick={() => setActiveIndex(null)} aria-label="Close preview" data-autofocus>
+              <span aria-hidden="true">×</span>
             </button>
             <div className="gallery-modal-media">
               {activeItem.image ? (

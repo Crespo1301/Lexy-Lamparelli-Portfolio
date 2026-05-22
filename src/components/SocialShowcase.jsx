@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import useRevealOnScroll from '../hooks/useRevealOnScroll'
+import useModalA11y from '../hooks/useModalA11y'
 
 export default function SocialShowcase({ items }) {
   const sectionRef = useRef(null)
+  const panelRef = useRef(null)
   const modalTouchStartX = useRef(null)
   const [activeIndex, setActiveIndex] = useState(null)
 
@@ -13,11 +15,10 @@ export default function SocialShowcase({ items }) {
     return items?.[activeIndex] ?? null
   }, [activeIndex, items])
 
+  useModalA11y(!!activeItem, panelRef)
+
   useEffect(() => {
     if (!activeItem) return undefined
-
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
 
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
@@ -36,7 +37,6 @@ export default function SocialShowcase({ items }) {
     window.addEventListener('keydown', handleKeyDown)
 
     return () => {
-      document.body.style.overflow = previousOverflow
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [activeItem, items.length])
@@ -76,7 +76,7 @@ export default function SocialShowcase({ items }) {
               <h2 className="portfolio-title portfolio-title-light">Social Media Work</h2>
             </div>
             <p className="portfolio-intro portfolio-intro-light">
-              A snapshot of Alexia’s short-form content work across TikTok and Instagram, centered around lifestyle, fashion, fitness,
+              A snapshot of Alexia's short-form content work across TikTok and Instagram, centered around lifestyle, fashion, fitness,
               skincare, and hair care storytelling.
             </p>
           </div>
@@ -119,7 +119,7 @@ export default function SocialShowcase({ items }) {
                       </div>
                     )}
                     <a href={item.link} target="_blank" rel="noreferrer">
-                      View profile ↗
+                      View profile <span aria-hidden="true">↗</span>
                     </a>
                   </div>
                 </div>
@@ -132,14 +132,14 @@ export default function SocialShowcase({ items }) {
       {activeItem && (
         <div className="gallery-modal" role="dialog" aria-modal="true" aria-label={`${activeItem.title} preview`}>
           <button type="button" className="gallery-modal-backdrop" aria-label="Close preview" onClick={() => setActiveIndex(null)} />
-          <div className="gallery-modal-panel gallery-modal-panel-dark" onTouchStart={handleModalTouchStart} onTouchEnd={handleModalTouchEnd}>
+          <div className="gallery-modal-panel gallery-modal-panel-dark" ref={panelRef} onTouchStart={handleModalTouchStart} onTouchEnd={handleModalTouchEnd}>
             <button
               type="button"
               className="gallery-modal-nav gallery-modal-nav-left gallery-modal-nav-dark"
               onClick={() => moveModal(-1)}
               aria-label="Show previous project"
             >
-              ‹
+              <span aria-hidden="true">‹</span>
             </button>
             <button
               type="button"
@@ -147,15 +147,16 @@ export default function SocialShowcase({ items }) {
               onClick={() => moveModal(1)}
               aria-label="Show next project"
             >
-              ›
+              <span aria-hidden="true">›</span>
             </button>
             <button
               type="button"
               className="gallery-modal-close gallery-modal-close-dark"
               onClick={() => setActiveIndex(null)}
               aria-label="Close preview"
+              data-autofocus
             >
-              ×
+              <span aria-hidden="true">×</span>
             </button>
             <div className="gallery-modal-media gallery-modal-media-social">
               {activeItem.thumbnail ? (
@@ -182,7 +183,7 @@ export default function SocialShowcase({ items }) {
                 </div>
               )}
               <a className="gallery-modal-profile-link" href={activeItem.link} target="_blank" rel="noreferrer">
-                View profile ↗
+                View profile <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>

@@ -32,7 +32,12 @@ export default function Navbar({ navItems, brand }) {
         </div>
       </div>
 
-      <nav className={`mobile-nav ${isOpen ? 'mobile-nav-open' : ''}`} aria-label="Mobile navigation">
+      <nav
+        className={`mobile-nav ${isOpen ? 'mobile-nav-open' : ''}`}
+        aria-label="Mobile navigation"
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+      >
         <div className="container mobile-nav-links">
           {navItems.map((item) => (
             <a key={item.href} href={item.href} onClick={() => setIsOpen(false)}>
