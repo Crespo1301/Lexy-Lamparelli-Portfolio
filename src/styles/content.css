@@ -351,9 +351,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
   min-height: 14.5rem;
-  padding: 1.6rem 1.5rem 1.5rem;
+  padding: 1.75rem 1.4rem;
+  text-align: center;
   color: inherit;
 }
 
@@ -363,22 +366,21 @@
 }
 
 .work-directory-index {
-  position: absolute;
-  top: 0.1rem;
-  right: 1.1rem;
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(4.5rem, 7vw, 6rem);
+  font-size: clamp(3.6rem, 5.5vw, 4.8rem);
   line-height: 1;
-  color: rgba(176, 15, 6, 0.12);
+  margin-bottom: 0.4rem;
+  color: rgba(176, 15, 6, 0.4);
   pointer-events: none;
 }
 
 .work-directory-body {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  align-items: center;
+  gap: 0.45rem;
 }
 
 .work-directory-body h3 {
@@ -390,9 +392,10 @@
 }
 
 .work-directory-meta {
-  font-size: 0.82rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   letter-spacing: 0.01em;
-  color: rgba(36, 23, 19, 0.62);
+  color: rgba(36, 23, 19, 0.78);
 }
 
 .work-directory-view {
