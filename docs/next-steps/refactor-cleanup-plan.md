@@ -6,7 +6,12 @@ Created: 2026-05-21. Status: planned (not yet started).
 This plan is the backlog for the cleanup phase. Each item is independently shippable.
 Tackle top to bottom; tiers reflect risk/effort, not hard ordering.
 
-## Tier 1: Safe deletions & config (low risk, high payoff)
+## Tier 1: Safe deletions & config (low risk, high payoff) — DONE 2026-05-21
+
+All four items below shipped on 2026-05-21: deleted `global.css`, removed `src.zip`,
+fixed `.gitignore` (`.mcp.json`, `.code-review-graph/`, `*.zip`), and scoped ESLint
+(`.agents`, `.claude`, `.code-review-graph`, `**/*.umd.js`). `npm run lint` is now clean
+(0 errors; one pre-existing Tier 3 hook warning remains). `readme.html` was kept (linked).
 
 1. **Delete dead stylesheet `src/styles/global.css` (1,103 lines).**
    - Verified not imported anywhere (`src/styles/index.css` imports tokens, layout,

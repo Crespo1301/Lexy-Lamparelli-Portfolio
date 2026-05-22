@@ -32,16 +32,25 @@ Last updated: 2026-05-21
 - Confirm the `#my-work` section renders the new image-free cards.
 - Submit the sitemap in Google Search Console; request homepage indexing.
 
-## Next phase: refactor & cleanup
+## Audit (2026-05-21)
 
-See `docs/next-steps/refactor-cleanup-plan.md`. Highest-value first items:
-- Delete dead `src/styles/global.css` (1,103 lines, not imported).
-- Remove stale `src.zip`; fix `.gitignore` gaps (`.mcp.json`, `.code-review-graph/`, `*.zip`).
-- Add `ignores` to `eslint.config.js` so `npm run lint` is clean (today's 60 errors are all
-  from vendored skill scripts, not real source).
+Writing + design audit against `docs/MASTER_RULES_AI.md`, impeccable, and ui-ux-pro-max:
+`docs/audits/2026-05-21-site-audit.md`. Health score 16/20 (Good), AI-slop PASS.
 
-Note: `public/readme.html` is linked from the footer ("Project README"), so it is NOT a
-stray. Keep and maintain it, or remove both the file and the footer link together.
+**Audit P1 resolved 2026-05-21:**
+- Straight quotes: all curly apostrophes replaced (escaped in `siteContent.js` string literals).
+- Mobile nav: closed nav is now `inert` + `aria-hidden`, so its links leave the tab order.
+- Lightbox focus management: new `src/hooks/useModalA11y.js` (focus move + Tab trap + restore
+  + scroll lock), used by both `CanvaGallery` and `SocialShowcase`; close button gets initial focus.
+
+Remaining audit items (P2/P3): copy voice pass, `max-height` nav transition, image WebP +
+dimensions, decorative glyphs to SVG. See the audit doc.
+
+## Refactor & cleanup
+
+Tier 1 of `docs/next-steps/refactor-cleanup-plan.md` is DONE (2026-05-21): deleted dead
+`global.css`, removed `src.zip`, fixed `.gitignore`, scoped ESLint (`npm run lint` now clean,
+0 errors). `public/readme.html` was kept (it is linked from the footer). Tier 2 to 4 remain.
 
 ## Carried-over follow-ups
 

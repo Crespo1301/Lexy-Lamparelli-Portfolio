@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Local-only AI tooling (never commit) and archives
+.mcp.json
+.env.ai.local
+.code-review-graph/
+*.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
