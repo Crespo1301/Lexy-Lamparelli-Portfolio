@@ -80,11 +80,17 @@
 }
 
 .mobile-nav {
-  display: grid;
+  display: none;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease;
   background: var(--cream);
   border-bottom: 1px solid rgba(176, 15, 6, 0.12);
+}
+
+@media (max-width: 920px) {
+  .mobile-nav {
+    display: grid;
+  }
 }
 
 .mobile-nav-open {
