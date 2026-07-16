@@ -16,7 +16,14 @@ dist-ssr
 .mcp.json
 .env.ai.local
 .code-review-graph/
+.claude/settings.local.json
+.claude/skills/
+.agents/skills/
 *.zip
+
+# Service-account keys must never be committed (belt-and-suspenders)
+*.sa.json
+/secrets/
 
 # Editor directories and files
 .vscode/*

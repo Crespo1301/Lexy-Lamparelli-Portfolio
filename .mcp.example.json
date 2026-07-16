@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "code-review-graph": {
+      "command": "/home/cresp3/.local/bin/code-review-graph",
+      "args": [
+        "serve",
+        "--repo",
+        "/home/cresp3/Lexy-Lamparelli-Portfolio"
+      ]
+    },
+    "stitch": {
+      "command": "bash",
+      "args": [
+        "./scripts/stitch-proxy.sh"
+      ]
+    },
+    "magic": {
+      "command": "bash",
+      "args": [
+        "./scripts/magic-mcp.sh"
+      ]
+    },
+    "seo": {
+      "command": "bash",
+      "args": [
+        "./scripts/seo-mcp.sh"
+      ]
+    }
+  }
+}
