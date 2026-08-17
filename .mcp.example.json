@@ -25,6 +25,17 @@
       "args": [
         "./scripts/seo-mcp.sh"
       ]
+    },
+    "google-analytics": {
+      "command": "pipx",
+      "args": [
+        "run",
+        "analytics-mcp"
+      ],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "${GOOGLE_APPLICATION_CREDENTIALS}",
+        "GOOGLE_PROJECT_ID": "${GOOGLE_PROJECT_ID}"
+      }
     }
   }
 }
